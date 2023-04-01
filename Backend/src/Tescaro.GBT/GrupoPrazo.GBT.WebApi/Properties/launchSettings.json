@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Tescaro.GBT.WebAPI": {
+    "Tescaro.GBT.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

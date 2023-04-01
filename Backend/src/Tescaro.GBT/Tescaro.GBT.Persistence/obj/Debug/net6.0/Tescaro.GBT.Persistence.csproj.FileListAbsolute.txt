@@ -1,0 +1,15 @@
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\bin\Debug\net6.0\Tescaro.GBT.Persistence.deps.json
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\bin\Debug\net6.0\Tescaro.GBT.Persistence.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\bin\Debug\net6.0\Tescaro.GBT.Persistence.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.csproj.AssemblyReference.cache
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.AssemblyInfoInputs.cache
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.AssemblyInfo.cs
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\refint\Tescaro.GBT.Persistence.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\ref\Tescaro.GBT.Persistence.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\bin\Debug\net6.0\Tescaro.GBT.Domain.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\bin\Debug\net6.0\Tescaro.GBT.Domain.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Persistence\obj\Debug\net6.0\Tescaro.GBT.Persistence.csproj.CopyComplete

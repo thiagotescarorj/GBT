@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0d0kJQU0oxRUT9r0B8NfmnMWFvJaAGOHdiOCzotrPYikhLaLXfo+N7+Knx3it0D58tHbHzM/RZaYJhlHXjpf+g==",
+  "dgSpecHash": "6jFiQGAs8g9NmL0MATLrgLSUjEoR4f/uyjFIJvZFHXV+Qjp/93OtuoCMkDy7iq/xulYugE3oILRBB4uMqSYTDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\Tescaro.GBT.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\suporte\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\suporte\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj": {}
+    "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj": {
+    "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
         "projectName": "GrupoPrazo.GBT.WebAPI",
-        "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
+        "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
         "packagesPath": "C:\\Users\\suporte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",

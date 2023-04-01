@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "IRqr5bc9FtYUT2uiJV9KjLUADrDiygaveuNCgtDJDeM=",
-  "Source": "GrupoPrazo.GBT.WebAPI",
-  "BasePath": "_content/GrupoPrazo.GBT.WebAPI",
+  "Hash": "qWBPVDu7ECY3m7zGN276a+RiZDfqtCIT/kw0hsNsO+8=",
+  "Source": "Tescaro.GBT.API",
+  "BasePath": "_content/Tescaro.GBT.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -1,5 +1,5 @@
-using Tescaro.GBT.WebAPI.DataContext;
 using Microsoft.EntityFrameworkCore;
+using Tescaro.GBT.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 
-builder.Services.AddDbContext<GBTDbContext>(options =>
+builder.Services.AddDbContext<GBTContext>(options =>
     options.UseSqlServer(connectionString));
 var app = builder.Build();
 

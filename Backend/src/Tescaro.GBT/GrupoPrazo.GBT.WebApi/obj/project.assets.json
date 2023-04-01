@@ -869,6 +869,46 @@
             "rid": "win"
           }
         }
+      },
+      "Tescaro.GBT.Appplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Tescaro.GBT.Domain": "1.0.0",
+          "Tescaro.GBT.Persistence": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tescaro.GBT.Appplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tescaro.GBT.Appplication.dll": {}
+        }
+      },
+      "Tescaro.GBT.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Tescaro.GBT.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tescaro.GBT.Domain.dll": {}
+        }
+      },
+      "Tescaro.GBT.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.15",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.15",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15",
+          "Tescaro.GBT.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tescaro.GBT.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tescaro.GBT.Persistence.dll": {}
+        }
       }
     }
   },
@@ -2215,6 +2255,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Tescaro.GBT.Appplication/1.0.0": {
+      "type": "project",
+      "path": "../Tescaro.GBT.Appplication/Tescaro.GBT.Appplication.csproj",
+      "msbuildProject": "../Tescaro.GBT.Appplication/Tescaro.GBT.Appplication.csproj"
+    },
+    "Tescaro.GBT.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Tescaro.GBT.Domain/Tescaro.GBT.Domain.csproj",
+      "msbuildProject": "../Tescaro.GBT.Domain/Tescaro.GBT.Domain.csproj"
+    },
+    "Tescaro.GBT.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../Tescaro.GBT.Persistence/Tescaro.GBT.Persistence.csproj",
+      "msbuildProject": "../Tescaro.GBT.Persistence/Tescaro.GBT.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2223,7 +2278,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.15",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.15",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "Tescaro.GBT.Appplication >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2232,11 +2288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
-      "projectName": "GrupoPrazo.GBT.WebAPI",
-      "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\GrupoPrazo.GBT.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\Tescaro.GBT.API.csproj",
+      "projectName": "Tescaro.GBT.API",
+      "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\Tescaro.GBT.API.csproj",
       "packagesPath": "C:\\Users\\suporte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2252,7 +2308,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Appplication\\Tescaro.GBT.Appplication.csproj": {
+              "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Appplication\\Tescaro.GBT.Appplication.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

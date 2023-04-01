@@ -41,9 +41,10 @@ export class ChamadosComponent {
         const isAtivoStr = chamado.isAtivo ? "Ativo" : "Inativo";
         return chamado.numero.toLocaleLowerCase().indexOf(filtrarPor) !== -1
           || isAtivoStr.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || chamado.dataHoraCadastro.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || chamado.dataRecebimento.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || chamado.dataPublicacao.toLocaleLowerCase().indexOf(filtrarPor) !== -1;
+          || chamado.dataHoraCadastro.indexOf(filtrarPor) !== -1
+          || chamado.dataRecebimento.indexOf(filtrarPor) !== -1
+          || chamado.dataEnvioHomologacao.indexOf(filtrarPor) !== -1
+          || chamado.dataPublicacao.indexOf(filtrarPor) !== -1;
       }
     );
   }

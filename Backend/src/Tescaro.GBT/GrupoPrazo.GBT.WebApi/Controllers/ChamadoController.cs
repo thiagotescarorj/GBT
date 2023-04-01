@@ -1,20 +1,20 @@
-using Tescaro.GBT.WebAPI.DataContext;
-using Tescaro.GBT.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Tescaro.GBT.Domain.Models;
+using Tescaro.GBT.Persistence;
 
-namespace Tescaro.GBT.WebAPI.Controllers
+namespace Tescaro.GBT.API.Controllers
 {
-   
+
 
     [ApiController]
     [Route("api/[controller]")]
     public class ChamadoController : ControllerBase
     {
-        private readonly GBTDbContext _GBTDbContext;
+        private readonly GBTContext _GBTDbContext;
 
-        public ChamadoController(GBTDbContext GBTDbContext)
+        public ChamadoController(GBTContext GBTContext)
         {
-            _GBTDbContext = GBTDbContext;
+            _GBTDbContext = GBTContext;
         }
 
 
