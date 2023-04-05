@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Tescaro.GBT.Persistence;
+using Tescaro.GBT.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

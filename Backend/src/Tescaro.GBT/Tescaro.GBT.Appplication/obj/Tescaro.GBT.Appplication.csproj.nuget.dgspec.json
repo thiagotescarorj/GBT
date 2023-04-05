@@ -31,8 +31,8 @@
               "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\Tescaro.GBT.Domain.csproj": {
                 "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\Tescaro.GBT.Domain.csproj"
               },
-              "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Persistence\\Tescaro.GBT.Persistence.csproj": {
-                "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Persistence\\Tescaro.GBT.Persistence.csproj"
+              "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj": {
+                "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj"
               }
             }
           }
@@ -121,14 +121,14 @@
         }
       }
     },
-    "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Persistence\\Tescaro.GBT.Persistence.csproj": {
+    "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Persistence\\Tescaro.GBT.Persistence.csproj",
-        "projectName": "Tescaro.GBT.Persistence",
-        "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Persistence\\Tescaro.GBT.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj",
+        "projectName": "Tescaro.GBT.Repository",
+        "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj",
         "packagesPath": "C:\\Users\\suporte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",

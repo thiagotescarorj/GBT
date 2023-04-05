@@ -875,7 +875,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Tescaro.GBT.Domain": "1.0.0",
-          "Tescaro.GBT.Persistence": "1.0.0"
+          "Tescaro.GBT.Repository": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Tescaro.GBT.Appplication.dll": {}
@@ -894,7 +894,7 @@
           "bin/placeholder/Tescaro.GBT.Domain.dll": {}
         }
       },
-      "Tescaro.GBT.Persistence/1.0.0": {
+      "Tescaro.GBT.Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -904,10 +904,10 @@
           "Tescaro.GBT.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Tescaro.GBT.Persistence.dll": {}
+          "bin/placeholder/Tescaro.GBT.Repository.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Tescaro.GBT.Persistence.dll": {}
+          "bin/placeholder/Tescaro.GBT.Repository.dll": {}
         }
       }
     }
@@ -2266,10 +2266,10 @@
       "path": "../Tescaro.GBT.Domain/Tescaro.GBT.Domain.csproj",
       "msbuildProject": "../Tescaro.GBT.Domain/Tescaro.GBT.Domain.csproj"
     },
-    "Tescaro.GBT.Persistence/1.0.0": {
+    "Tescaro.GBT.Repository/1.0.0": {
       "type": "project",
-      "path": "../Tescaro.GBT.Persistence/Tescaro.GBT.Persistence.csproj",
-      "msbuildProject": "../Tescaro.GBT.Persistence/Tescaro.GBT.Persistence.csproj"
+      "path": "../Tescaro.GBT.Repository/Tescaro.GBT.Repository.csproj",
+      "msbuildProject": "../Tescaro.GBT.Repository/Tescaro.GBT.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2279,7 +2279,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.15",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "Tescaro.GBT.Appplication >= 1.0.0"
+      "Tescaro.GBT.Appplication >= 1.0.0",
+      "Tescaro.GBT.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2311,6 +2312,9 @@
           "projectReferences": {
             "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Appplication\\Tescaro.GBT.Appplication.csproj": {
               "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Appplication\\Tescaro.GBT.Appplication.csproj"
+            },
+            "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj": {
+              "projectPath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Repository\\Tescaro.GBT.Repository.csproj"
             }
           }
         }

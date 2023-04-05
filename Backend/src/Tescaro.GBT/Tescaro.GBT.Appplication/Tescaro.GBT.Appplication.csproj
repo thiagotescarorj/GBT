@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tescaro.GBT.Domain\Tescaro.GBT.Domain.csproj" />
-    <ProjectReference Include="..\Tescaro.GBT.Persistence\Tescaro.GBT.Persistence.csproj" />
+    <ProjectReference Include="..\Tescaro.GBT.Repository\Tescaro.GBT.Repository.csproj" />
   </ItemGroup>
 
 </Project>

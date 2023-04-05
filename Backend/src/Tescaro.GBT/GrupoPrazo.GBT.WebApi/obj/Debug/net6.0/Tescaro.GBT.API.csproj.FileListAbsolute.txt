@@ -45,6 +45,12 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Appplication.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Domain.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Repository.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Appplication.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Repository.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Domain.pdb
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.csproj.AssemblyReference.cache
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.AssemblyInfoInputs.cache
@@ -66,9 +72,3 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.pdb
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.genruntimeconfig.cache
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\ref\Tescaro.GBT.API.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Appplication.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Domain.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Persistence.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Appplication.pdb
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Domain.pdb
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.Persistence.pdb

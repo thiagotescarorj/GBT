@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tescaro.GBT.Appplication\Tescaro.GBT.Appplication.csproj" />
+    <ProjectReference Include="..\Tescaro.GBT.Repository\Tescaro.GBT.Repository.csproj" />
   </ItemGroup>
 
 </Project>

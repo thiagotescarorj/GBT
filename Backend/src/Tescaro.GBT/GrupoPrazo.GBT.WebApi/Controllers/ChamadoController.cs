@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Tescaro.GBT.Domain.Models;
-using Tescaro.GBT.Persistence;
+using Tescaro.GBT.Repository;
 
 namespace Tescaro.GBT.API.Controllers
 {

@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.15",
           "Swashbuckle.AspNetCore": "6.2.3",
-          "Tescaro.GBT.Appplication": "1.0.0"
+          "Tescaro.GBT.Appplication": "1.0.0",
+          "Tescaro.GBT.Repository": "1.0.0"
         },
         "runtime": {
           "Tescaro.GBT.API.dll": {}
@@ -498,7 +499,7 @@
       "Tescaro.GBT.Appplication/1.0.0": {
         "dependencies": {
           "Tescaro.GBT.Domain": "1.0.0",
-          "Tescaro.GBT.Persistence": "1.0.0"
+          "Tescaro.GBT.Repository": "1.0.0"
         },
         "runtime": {
           "Tescaro.GBT.Appplication.dll": {}
@@ -509,7 +510,7 @@
           "Tescaro.GBT.Domain.dll": {}
         }
       },
-      "Tescaro.GBT.Persistence/1.0.0": {
+      "Tescaro.GBT.Repository/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.15",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.15",
@@ -517,7 +518,7 @@
           "Tescaro.GBT.Domain": "1.0.0"
         },
         "runtime": {
-          "Tescaro.GBT.Persistence.dll": {}
+          "Tescaro.GBT.Repository.dll": {}
         }
       }
     }
@@ -881,7 +882,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Tescaro.GBT.Persistence/1.0.0": {
+    "Tescaro.GBT.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

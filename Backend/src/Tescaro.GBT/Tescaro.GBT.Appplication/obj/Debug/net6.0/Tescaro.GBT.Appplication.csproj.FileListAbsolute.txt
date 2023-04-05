@@ -2,9 +2,9 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Appplication.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Appplication.pdb
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Domain.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Persistence.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Repository.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Domain.pdb
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Persistence.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\bin\Debug\net6.0\Tescaro.GBT.Repository.pdb
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\obj\Debug\net6.0\Tescaro.GBT.Appplication.csproj.AssemblyReference.cache
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\obj\Debug\net6.0\Tescaro.GBT.Appplication.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Appplication\obj\Debug\net6.0\Tescaro.GBT.Appplication.AssemblyInfoInputs.cache

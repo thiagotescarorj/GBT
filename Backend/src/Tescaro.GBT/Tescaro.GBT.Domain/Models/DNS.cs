@@ -26,7 +26,8 @@ namespace Tescaro.GBT.Domain.Models
         public bool IsSemDNSAteMOMENTO { get; set; }
         public bool IsSemDNS { get; set; }
 
-        public IEnumerable<Cliente> Cliente { get; set; }
+        public Cliente Cliente { get; set; }
+        public IEnumerable<Cliente> ClienteList { get; set; }
 
     }
 }
