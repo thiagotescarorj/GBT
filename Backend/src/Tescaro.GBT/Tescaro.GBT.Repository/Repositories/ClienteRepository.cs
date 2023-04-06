@@ -18,7 +18,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(cliente);
         }
 
-        public void Atualizar<Cliente>(Cliente cliente)
+        public void Atualisar<Cliente>(Cliente cliente)
         {
             _context.Update(cliente);
         }

@@ -22,7 +22,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(entity);
         }
 
-        public void Atualizar<T>(T entity) 
+        public void Atualisar<T>(T entity) 
         {
             _context.Update(entity);
         }

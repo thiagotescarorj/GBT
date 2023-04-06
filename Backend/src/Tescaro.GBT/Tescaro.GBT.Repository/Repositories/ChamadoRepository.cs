@@ -18,7 +18,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(chamado);
         }
 
-        public void Atualizar<Chamado>(Chamado chamado)
+        public void Atualisar<Chamado>(Chamado chamado)
         {
             _context.Update(chamado);
         }

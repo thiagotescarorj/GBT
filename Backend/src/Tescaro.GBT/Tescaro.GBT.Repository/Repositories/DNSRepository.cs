@@ -18,7 +18,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(dns);
         }
 
-        public void Atualizar<DNS>(DNS dns)
+        public void Atualisar<DNS>(DNS dns)
         {
             _context.Update(dns);
         }

@@ -23,7 +23,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(bancoDados);
         }
 
-        public void Atualizar<BancoDados>(BancoDados bancoDados)
+        public void Atualisar<BancoDados>(BancoDados bancoDados)
         {
             _context.Update(bancoDados);
         }
