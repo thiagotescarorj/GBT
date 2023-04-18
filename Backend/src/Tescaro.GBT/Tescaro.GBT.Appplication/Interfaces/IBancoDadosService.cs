@@ -10,7 +10,7 @@ namespace Tescaro.GBT.Appplication.Interfaces
     public interface IBancoDadosService
     {
         Task<BancoDados> AdicionarBancoDados(BancoDados chamado);
-        Task<BancoDados> AtualisarBancoDados(long chamadoId, BancoDados model);
+        Task<BancoDados> AtualizarBancoDados(long chamadoId, BancoDados model);
         Task<bool> ExcluirBancoDados(long chamadoId);
         Task<List<BancoDados>> GetTodosBancoDados();
         Task<BancoDados> GetBancoDadosById(long bancoDadosId);

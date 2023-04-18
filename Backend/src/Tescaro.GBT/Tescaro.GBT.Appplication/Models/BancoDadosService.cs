@@ -38,7 +38,7 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<BancoDados> AtualisarBancoDados(long bancoDadosId, BancoDados model)
+        public async Task<BancoDados> AtualizarBancoDados(long bancoDadosId, BancoDados model)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = bancoDado.Id;
 
-                _GBTRepository.Atualisar(model);
+                _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {

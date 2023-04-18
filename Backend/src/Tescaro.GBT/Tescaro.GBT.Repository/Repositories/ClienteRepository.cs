@@ -18,7 +18,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(cliente);
         }
 
-        public void Atualisar<Cliente>(Cliente cliente)
+        public void Atualizar<Cliente>(Cliente cliente)
         {
             _context.Update(cliente);
         }
@@ -35,25 +35,25 @@ namespace Tescaro.GBT.Repository.Repositories
 
         public async Task<Cliente> GetClienteById(long clienteId)
         {
-            IQueryable<Cliente> query = _context.Cliente.Where(x => x.Id == clienteId);
+            IQueryable<Cliente> query = _context.Cliente.Where(x => x.Id == clienteId).AsNoTracking();
             return await query.FirstOrDefaultAsync();
         }
 
         public async Task<List<Cliente>> GetTodosClientes()
         {
-            IQueryable<Cliente> query = _context.Cliente;
+            IQueryable<Cliente> query = _context.Cliente.AsNoTracking();
             return await query.ToListAsync();
         }
 
         public async Task<List<Cliente>> GetTodosAtivosClientes()
         {
-            IQueryable<Cliente> query = _context.Cliente.Where(x => x.IsAtivo == true);
+            IQueryable<Cliente> query = _context.Cliente.Where(x => x.IsAtivo == true).AsNoTracking();
             return await query.ToListAsync();
         }
 
         public async Task<List<Cliente>> GetTodosClientesByNome(string nome)
         {
-            IQueryable<Cliente> query = _context.Cliente.Where(x => x.Nome.Contains(nome));
+            IQueryable<Cliente> query = _context.Cliente.Where(x => x.Nome.Contains(nome)).AsNoTracking();
             return await query.ToListAsync();
         }
 

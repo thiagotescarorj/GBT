@@ -10,7 +10,7 @@ namespace Tescaro.GBT.Appplication.Interfaces
     public interface IClienteService
     {
         Task<Cliente> AdicionarCliente(Cliente cliente);
-        Task<Cliente> AtualisarCliente(long clienteId, Cliente model);
+        Task<Cliente> AtualizarCliente(long clienteId, Cliente model);
         Task<bool> ExcluirCliente(long clienteId);
         Task<List<Cliente>> GetTodosClientes();
         Task<Cliente> GetClienteById(long clienteId);

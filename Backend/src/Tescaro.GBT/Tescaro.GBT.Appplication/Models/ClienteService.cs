@@ -38,7 +38,7 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<Cliente> AtualisarCliente(long clienteId, Cliente model)
+        public async Task<Cliente> AtualizarCliente(long clienteId, Cliente model)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = cliente.Id;
 
-                _GBTRepository.Atualisar(model);
+                _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {

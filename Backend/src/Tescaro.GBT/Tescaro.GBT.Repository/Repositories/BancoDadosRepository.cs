@@ -23,7 +23,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(bancoDados);
         }
 
-        public void Atualisar<BancoDados>(BancoDados bancoDados)
+        public void Atualizar<BancoDados>(BancoDados bancoDados)
         {
             _context.Update(bancoDados);
         }
@@ -57,7 +57,7 @@ namespace Tescaro.GBT.Repository.Repositories
 
         public async Task<List<BancoDados>> GetTodosBancoDadosByCliente(long clienteId)
         {
-            IQueryable<BancoDados> query = _context.BancoDados.Where(x => x.Cliente.Id == clienteId);
+            IQueryable<BancoDados> query = _context.BancoDados.Where(x => x.ClienteId == clienteId);
             return await query.ToListAsync();
         }
 

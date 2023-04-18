@@ -23,11 +23,10 @@ namespace Tescaro.GBT.Domain.Models
 
         [Display(Name = "Data Hora Cadastro")]
         public DateTime DataHoraCadastro { get; set; }
-        public bool IsSemDNSAteMOMENTO { get; set; }
-        public bool IsSemDNS { get; set; }
 
+        public long ClienteId { get; set; }
         public Cliente Cliente { get; set; }
-        public IEnumerable<Cliente> ClienteList { get; set; }
+        
 
     }
 }

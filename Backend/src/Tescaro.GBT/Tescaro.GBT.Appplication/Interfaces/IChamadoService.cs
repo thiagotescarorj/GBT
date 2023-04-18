@@ -10,7 +10,7 @@ namespace Tescaro.GBT.Appplication.Interfaces
     public interface IChamadoService
     {
         Task<Chamado> AdicionarChamado(Chamado chamado);
-        Task<Chamado> AtualisarChamado(long chamadoId, Chamado model);
+        Task<Chamado> AtualizarChamado(long chamadoId, Chamado model);
         Task<bool> ExcluirChamado(long chamadoId);
         Task<List<Chamado>> GetTodosChamados();
         Task<Chamado> GetChamadoById(long chamadoId);

@@ -38,7 +38,7 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<Chamado> AtualisarChamado(long chamadoId, Chamado model)
+        public async Task<Chamado> AtualizarChamado(long chamadoId, Chamado model)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = chamado.Id;
 
-                _GBTRepository.Atualisar(model);
+                _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
@@ -86,7 +86,7 @@ namespace Tescaro.GBT.Appplication.Models
         {
             try
             {
-                var chamados = await _chamadoRepository.GetTodosChamados();
+                var chamados =  _chamadoRepository.GetTodosChamados();
                 if (chamados == null) return null;
                 return chamados;
             }

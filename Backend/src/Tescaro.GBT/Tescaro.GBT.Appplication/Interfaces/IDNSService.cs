@@ -10,7 +10,7 @@ namespace Tescaro.GBT.Appplication.Interfaces
     public interface IDNSService
     {
         Task<DNS> AdicionarDNS(DNS dns);
-        Task<DNS> AtualisarDNS(long dnsId, DNS model);
+        Task<DNS> AtualizarDNS(long dnsId, DNS model);
         Task<bool> ExcluirDNS(long dnsId);
         Task<List<DNS>> GetTodosDNS();
         Task<DNS> GetDNSById(long dnsId);

@@ -37,7 +37,7 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<DNS> AtualisarDNS(long dnsId, DNS model)
+        public async Task<DNS> AtualizarDNS(long dnsId, DNS model)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = dns.Id;
 
-                _GBTRepository.Atualisar(model);
+                _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {

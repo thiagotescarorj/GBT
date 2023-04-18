@@ -11,7 +11,7 @@ namespace Tescaro.GBT.Repository.Interfaces
     {
         #region Geral
         void Adicionar<T>(T entity);
-        void Atualisar<T>(T entity);
+        void Atualizar<T>(T entity);
         void Excluir<T>(T entity);
         void ExcluirVarios<T>(List<T> entityList); 
 

@@ -18,7 +18,7 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.Add(dns);
         }
 
-        public void Atualisar<DNS>(DNS dns)
+        public void Atualizar<DNS>(DNS dns)
         {
             _context.Update(dns);
         }
@@ -46,19 +46,19 @@ namespace Tescaro.GBT.Repository.Repositories
 
         public async Task<List<DNS>> GetTodosDNS()
         {
-            IQueryable<DNS> query = _context.DNS.Include(x => x.ClienteList);
+            IQueryable<DNS> query = _context.DNS;
             return await query.ToListAsync();
         }
 
         public async Task<List<DNS>> GetTodosDNSByCliente(long clienteId)
         {
-            IQueryable<DNS> query = _context.DNS.Include(x => x.Cliente).Where(x => x.Cliente.Id == clienteId);
+            IQueryable<DNS> query = _context.DNS.Include(x => x.ClienteId).Where(x => x.ClienteId == clienteId);
             return await query.ToListAsync();
         }
 
         public async Task<List<DNS>> GetTodosDNSByNome(string nome)
         {
-            IQueryable<DNS> query = _context.DNS.Include(x => x.Cliente).Where(x => x.Nome.Contains(nome));
+            IQueryable<DNS> query = _context.DNS.Include(x => x.ClienteId).Where(x => x.Nome.Contains(nome));
             return await query.ToListAsync();
         }
 

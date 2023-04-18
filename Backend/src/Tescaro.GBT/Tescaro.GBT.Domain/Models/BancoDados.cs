@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Collections;
 
 namespace Tescaro.GBT.Domain.Models
 {
@@ -21,9 +22,8 @@ namespace Tescaro.GBT.Domain.Models
         [Display(Name = "Data Hora Cadastro")]
         public DateTime DataHoraCadastro { get; set; }
 
-
-
-        public Cliente Cliente { get; set; }   
-        public IEnumerable<Cliente> ClienteList { get; set; }   
+        
+        public long ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
     }
 }
