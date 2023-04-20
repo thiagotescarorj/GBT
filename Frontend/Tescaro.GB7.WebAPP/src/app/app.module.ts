@@ -19,7 +19,6 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { NavegacaoComponent } from './shared/navegacao/navegacao.component';
 import { DNSsComponent } from './components/dns/dns/dns.component';
 import { BancosDadosComponent } from './components/bancosDados/bancosDados/bancosDados.component';
-import { PerfilComponent } from './components/perfil/perfil/perfil.component';
 import { TituloComponent } from './shared/titulo/titulo.component';
 
 import { ChamadoService } from './services/chamado.service';
@@ -31,6 +30,14 @@ import { ClienteService } from './services/cliente.service';
 
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ChamadoDetalheComponent } from './components/chamados/chamado-detalhe/chamado-detalhe.component';
+import { ChamadoListaComponent } from './components/chamados/chamado-lista/chamado-lista.component';
+import { ChamadoFormComponent } from './components/chamados/chamado-form/chamado-form.component';
+import { ChamadoEditarComponent } from './components/chamados/chamado-editar/chamado-editar.component';
+import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { RegisterComponent } from './components/user/register/register.component';
+import { PerfilComponent } from './components/user/perfil/perfil/perfil.component';
 
 
 
@@ -46,6 +53,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     TituloComponent,
     DashboardComponent,
     DateTimeFormatPipe,
+    ChamadoDetalheComponent,
+    ChamadoListaComponent,
+    ChamadoFormComponent,
+    ChamadoEditarComponent,
+    UserComponent,
+    LoginComponent,
+    RegisterComponent,
    ],
   imports: [
     BrowserModule,

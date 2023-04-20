@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e95420;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">GBT</a>
     <button class="navbar-toggler"  (click)="isCollapsed = !isCollapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
           <a class="nav-link" aria-current="page" href="#">Projetos em Atividade</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="chamados">Chamados</a>
+          <a class="nav-link" routerLink="/chamados/lista">Chamados</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="dns">DNS</a>
@@ -32,11 +32,11 @@
             Thiago
           </a>
           <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  routerLinkActive="active">
-            <a class="dropdown-item" routerLink="perfil">
+            <a class="dropdown-item" routerLink="user/perfil">
               Perfil
             </a>
             <div role="separator" class="divider"></div>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" routerLink="user/login">
               Sair
             </a>
           </div>
