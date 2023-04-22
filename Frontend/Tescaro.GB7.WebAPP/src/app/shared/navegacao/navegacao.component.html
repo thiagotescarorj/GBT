@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e95420;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e95420;" *ngIf="showMenu()">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GBT</a>
+    <i class="fa fa-users me-2" aria-hidden="true"></i>
+    <a class="navbar-brand" routerLink="dashboard" id="logo">GDA</a>
+    <!-- <img src="../../../assets/logo.png" class="my-4" alt="" width="60px"> -->
+
     <button class="navbar-toggler"  (click)="isCollapsed = !isCollapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
