@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,6 +38,9 @@ import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { PerfilComponent } from './components/user/perfil/perfil/perfil.component';
+import { ClienteDetalheComponent } from './components/clientes/cliente-detalhe/cliente-detalhe.component';
+import { ClienteEditarComponent } from './components/clientes/cliente-editar/cliente-editar.component';
+import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
 
 
 
@@ -60,6 +63,9 @@ import { PerfilComponent } from './components/user/perfil/perfil/perfil.componen
     UserComponent,
     LoginComponent,
     RegisterComponent,
+    ClienteDetalheComponent,
+    ClienteEditarComponent,
+    ClienteFormComponent,
    ],
   imports: [
     BrowserModule,
@@ -67,6 +73,7 @@ import { PerfilComponent } from './components/user/perfil/perfil/perfil.componen
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     CollapseModule.forRoot(),
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
