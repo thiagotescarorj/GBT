@@ -6,7 +6,7 @@ import { BancoDados } from '../models/BancoDados';
 @Injectable()
 export class BancoDadosService {
 
-  baseURL = 'https://localhost:7276/api/BancoDados/GetAll';
+  baseURL = 'https://localhost:7276/api/BancoDados/';
 
   constructor(private http: HttpClient) { }
 

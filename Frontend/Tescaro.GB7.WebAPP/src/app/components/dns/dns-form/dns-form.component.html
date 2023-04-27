@@ -1,6 +1,6 @@
 <div class="card rounded shadow-sm" style="margin-bottom: 20px;">
 
-  <form (ngSubmit)="submit()" [formGroup]="clienteForm" #formDir="ngForm">
+  <form (ngSubmit)="submit()" [formGroup]="dnsForm" #formDir="ngForm">
     <div class="p-3">
       <div class="row" style="margin-bottom: 10px;">
         <div class="form-group col-md-6">
@@ -9,6 +9,14 @@
           formControlName="nome" placeholder="">
           <div *ngIf="nome.invalid && formDir.submitted" class="validation-error" >
             <p *ngIf="nome.errors?.['required']">O campo Nome é obrigatório</p>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Cliente</label>
+          <input type="text" class="form-control"
+          formControlName="cliente" placeholder="">
+          <div *ngIf="cliente.invalid && formDir.submitted" class="validation-error" >
+            <p *ngIf="cliente.errors?.['required']">O campo Cliente é obrigatório</p>
           </div>
         </div>
       </div>

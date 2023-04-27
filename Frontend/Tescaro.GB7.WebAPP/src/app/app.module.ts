@@ -41,6 +41,15 @@ import { PerfilComponent } from './components/user/perfil/perfil/perfil.componen
 import { ClienteDetalheComponent } from './components/clientes/cliente-detalhe/cliente-detalhe.component';
 import { ClienteEditarComponent } from './components/clientes/cliente-editar/cliente-editar.component';
 import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
+import { ClienteListaComponent } from './components/clientes/cliente-lista/cliente-lista.component';
+import { DnsDetalheComponent } from './components/dns/dns-detalhe/dns-detalhe.component';
+import { DnsEditarComponent } from './components/dns/dns-editar/dns-editar.component';
+import { DnsFormComponent } from './components/dns/dns-form/dns-form.component';
+import { DnsListaComponent } from './components/dns/dns-lista/dns-lista.component';
+import { BancoDadosListaComponent } from './components/bancosDados/banco-dados-lista/banco-dados-lista.component';
+import { BancoDadosEditarComponent } from './components/bancosDados/banco-dados-editar/banco-dados-editar.component';
+import { BancoDadosDetalheComponent } from './components/bancosDados/banco-dados-detalhe/banco-dados-detalhe.component';
+import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-form/banco-dados-form.component';
 
 
 
@@ -66,6 +75,15 @@ import { ClienteFormComponent } from './components/clientes/cliente-form/cliente
     ClienteDetalheComponent,
     ClienteEditarComponent,
     ClienteFormComponent,
+    ClienteListaComponent,
+    DnsDetalheComponent,
+    DnsEditarComponent,
+    DnsFormComponent,
+    DnsListaComponent,
+    BancoDadosListaComponent,
+    BancoDadosEditarComponent,
+    BancoDadosDetalheComponent,
+    BancoDadosFormComponent,
    ],
   imports: [
     BrowserModule,

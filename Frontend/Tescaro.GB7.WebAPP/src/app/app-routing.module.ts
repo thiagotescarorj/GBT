@@ -13,6 +13,18 @@ import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { PerfilComponent } from './components/user/perfil/perfil/perfil.component';
+import { ClienteDetalheComponent } from './components/clientes/cliente-detalhe/cliente-detalhe.component';
+import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
+import { ClienteEditarComponent } from './components/clientes/cliente-editar/cliente-editar.component';
+import { ClienteListaComponent } from './components/clientes/cliente-lista/cliente-lista.component';
+import { DnsDetalheComponent } from './components/dns/dns-detalhe/dns-detalhe.component';
+import { DnsFormComponent } from './components/dns/dns-form/dns-form.component';
+import { DnsListaComponent } from './components/dns/dns-lista/dns-lista.component';
+import { DnsEditarComponent } from './components/dns/dns-editar/dns-editar.component';
+import { BancoDadosDetalheComponent } from './components/bancosDados/banco-dados-detalhe/banco-dados-detalhe.component';
+import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-form/banco-dados-form.component';
+import { BancoDadosListaComponent } from './components/bancosDados/banco-dados-lista/banco-dados-lista.component';
+import { BancoDadosEditarComponent } from './components/bancosDados/banco-dados-editar/banco-dados-editar.component';
 
 const routes: Routes = [
   {path: "user", component: UserComponent,
@@ -22,8 +34,18 @@ const routes: Routes = [
 
     ]
   },
-  {path: "bancoDados", component: BancosDadosComponent},
+
+  {path: "bancoDados", redirectTo: 'bancoDados/lista'},
+  {path: "bancoDados", component: BancosDadosComponent,
+  children:[
+    {path: 'detalhe/:id', component: BancoDadosDetalheComponent},
+    {path: 'form', component: BancoDadosFormComponent},
+    {path: 'lista', component: BancoDadosListaComponent},
+    {path: 'editar/:id', component: BancoDadosEditarComponent},
+   ]
+  },
   {path: "dashboard", component: DashboardComponent},
+
   {path: "chamados", redirectTo: 'chamados/lista'},
   {path: "chamados", component: ChamadosComponent,
    children:[
@@ -33,8 +55,27 @@ const routes: Routes = [
     {path: 'editar/:id', component: ChamadoEditarComponent},
    ]
   },
-  {path: "clientes", component: ClientesComponent},
-  {path: "dns", component: DNSsComponent},
+
+  {path: "clientes", redirectTo: 'clientes/lista'},
+  {path: "clientes", component: ClientesComponent,
+    children:[
+    {path: 'detalhe/:id', component: ClienteDetalheComponent},
+    {path: 'form', component: ClienteFormComponent},
+    {path: 'lista', component: ClienteListaComponent},
+    {path: 'editar/:id', component: ClienteEditarComponent},
+    ]
+  },
+
+
+  {path: "dns", redirectTo: 'dns/lista'},
+  {path: "dns", component: DNSsComponent,
+    children:[
+    {path: 'detalhe/:id', component: DnsDetalheComponent},
+    {path: 'form', component: DnsFormComponent},
+    {path: 'lista', component: DnsListaComponent},
+    {path: 'editar/:id', component: DnsEditarComponent},
+    ]
+  },
   {path: "user/perfil", component: PerfilComponent},
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: '**', redirectTo: 'dashboard', pathMatch: 'full'},
