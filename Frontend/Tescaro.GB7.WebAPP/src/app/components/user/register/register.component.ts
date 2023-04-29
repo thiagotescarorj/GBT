@@ -55,7 +55,8 @@ export class RegisterComponent implements OnInit {
     console.log('Criado Formulário')
   }
 
-   resetForm(){
+   resetForm(event: any): void{
+    event.preventDefault();
     this.registerForm.reset();
   }
 

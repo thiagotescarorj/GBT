@@ -55,7 +55,8 @@ export class PerfilComponent implements OnInit {
     console.log('Criado Formulário')
   }
 
-   resetForm(){
+   resetForm(event: any): void{
+    event.preventDefault();
     this.perfilForm.reset();
   }
 

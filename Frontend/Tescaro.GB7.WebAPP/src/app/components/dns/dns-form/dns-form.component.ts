@@ -35,7 +35,8 @@ export class DnsFormComponent implements OnInit {
     console.log('Criado Formulário')
   }
 
-   resetForm(){
+   resetForm(event: any): void{
+    event.preventDefault();
     this.dnsForm.reset();
   }
 

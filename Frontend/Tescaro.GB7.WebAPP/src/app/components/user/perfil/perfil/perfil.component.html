@@ -129,7 +129,7 @@
     </div>
     <div class="card-footer">
       <div class="d-flex justify-content-end">
-        <button class="btn btn-outline-danger me-auto border">
+        <button (click)="resetForm($event)" class="btn btn-outline-danger me-auto border" routerLink="/dashboard">
           Cancelar Alteração
         </button>
         <button class="btn btn-success">
