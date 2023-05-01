@@ -14,17 +14,17 @@ namespace Tescaro.GBT.API.DTOs
         public string? IsAtivo { get; set; }
 
         [Display(Name = "Data Hora Cadastro")]
-        public string? DataHoraCadastro { get; set; }
+        public DateTime? DataHoraCadastro { get; set; }
 
         [Required(ErrorMessage = "O campo Data do Recebimento é obrigatório")]
         [Display(Name = "Data do Recebimento")]
-        public string? DataRecebimento { get; set; }
+        public DateTime? DataRecebimento { get; set; }
 
         [Display(Name = "Data da Publicação")]
-        public string? DataPublicacao { get; set; }
+        public DateTime? DataPublicacao { get; set; }
 
         [Display(Name = "Data do Envio para Homologação")]
-        public string? DataEnvioHomologacao { get; set; }
+        public DateTime? DataEnvioHomologacao { get; set; }
 
         [Display(Name = "Observação")]
         public string? Observacao { get; set; }

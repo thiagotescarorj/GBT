@@ -12,6 +12,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { defineLocale } from 'ngx-bootstrap/chronos';
+import { ptBrLocale } from 'ngx-bootstrap/locale';
+
 
 import { AppComponent } from './app.component';
 import { ChamadosComponent } from './components/chamados/chamados.component';
@@ -51,6 +55,7 @@ import { BancoDadosEditarComponent } from './components/bancosDados/banco-dados-
 import { BancoDadosDetalheComponent } from './components/bancosDados/banco-dados-detalhe/banco-dados-detalhe.component';
 import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-form/banco-dados-form.component';
 
+defineLocale('pt-br', ptBrLocale);
 
 
 @NgModule({
@@ -84,7 +89,7 @@ import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-fo
     BancoDadosEditarComponent,
     BancoDadosDetalheComponent,
     BancoDadosFormComponent,
-   ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -102,7 +107,9 @@ import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-fo
       preventDuplicates: true,
       progressBar: true
     }),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    BsDatepickerModule.forRoot(),
+
 
   ],
 
@@ -111,3 +118,4 @@ import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-fo
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
+

@@ -6,7 +6,7 @@ import { Chamado } from '../models/Chamado';
 @Injectable()
 export class ChamadoService {
 
-  baseURL = 'https://localhost:7276/api/Chamado/';
+  baseURL = 'https://localhost:7276/api/Chamado';
 
   constructor(private http: HttpClient) { }
 

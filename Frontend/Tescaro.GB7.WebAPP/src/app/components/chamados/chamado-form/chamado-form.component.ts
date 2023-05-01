@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { BsLocaleService } from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-chamado-form',
@@ -10,7 +11,11 @@ export class ChamadoFormComponent implements OnInit {
 
   chamadoForm!: FormGroup;
 
-  constructor(private fb: FormBuilder){}
+  constructor(private fb: FormBuilder,
+    private localeService: BsLocaleService)
+    {
+      this.localeService.use('pt-br');
+    }
 
     ngOnInit(): void {
     this.chamadoForm = new FormGroup({
@@ -57,6 +62,15 @@ export class ChamadoFormComponent implements OnInit {
    resetForm(event: any): void{
     event.preventDefault();
     this.chamadoForm.reset();
+  }
+
+  get bsConfig(): any{
+    return {
+      adaptivePosition: true,
+      dateInputFormat: 'DD/MM/YYYY',
+      containerClass: 'theme-orange',
+      showWeekNumbers: false
+     }
   }
 
 }

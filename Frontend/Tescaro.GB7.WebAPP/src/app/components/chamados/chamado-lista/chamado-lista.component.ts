@@ -141,8 +141,7 @@ export class ChamadoListaComponent {
   }
 
   detalheChamado(id: number): void{
-    this.router.navigate([`chamados/detalhe/${id}`]);
-  }
+    this.router.navigate([`chamados/editar/${id}`]);  }
 
 }
 

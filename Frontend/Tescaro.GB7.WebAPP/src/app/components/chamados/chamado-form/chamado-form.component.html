@@ -38,18 +38,30 @@
       <div class="row" style="margin-bottom: 10px;">
         <div class="form-group col-md-4">
           <label>Data Recebimento</label>
-          <input type="datetime" class="form-control" placeholder="">
+          <input type="datetime"
+          class="form-control"
+          placeholder=""
+          bsDatepicker
+          [bsConfig]="bsConfig">
           <div *ngIf="numero.invalid && formDir.submitted" class="validation-error" >
             <p *ngIf="numero.errors?.['required']">O campo Data Recebimento é obrigatório</p>
           </div>
         </div>
         <div class="form-group col-md-4">
           <label>Data Homologação</label>
-          <input type="datetime" class="form-control" placeholder="">
+          <input type="datetime"
+          class="form-control"
+          placeholder=""
+          bsDatepicker
+          [bsConfig]="bsConfig">
         </div>
         <div class="form-group col-md-4">
           <label>Data Publicação</label>
-          <input type="datetime" class="form-control" placeholder="">
+          <input type="datetime"
+          class="form-control"
+          placeholder=""
+          bsDatepicker
+          [bsConfig]="bsConfig">
         </div>
       </div>
       <div class="row" style="margin-bottom: 10px;">
