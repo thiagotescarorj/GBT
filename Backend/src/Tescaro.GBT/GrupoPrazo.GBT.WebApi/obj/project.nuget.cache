@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dQ7c2RU8zmjTX1JrDRnSeo/sOvvEML1I6vttw2RvFeDGB8EPdyqcCsEzyE2Rx8alq2lUrTrboItK6+lv7HCovQ==",
+  "dgSpecHash": "GL8F4j/7asZ0aNz+eCIO6bXXsRT3OWLPR6vGFK0lF1rTHBTnzEbiuBBg/DMfDiBRoo/yKfpoM2zf4mxLS54dMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\suporte\\Documents\\Projetos\\GBT\\GBT\\Backend\\src\\Tescaro.GBT\\GrupoPrazo.GBT.WebApi\\Tescaro.GBT.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\suporte\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\suporte\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\suporte\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\suporte\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.16\\microsoft.aspnetcore.jsonpatch.6.0.16.nupkg.sha512",
     "C:\\Users\\suporte\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.16\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.16.nupkg.sha512",

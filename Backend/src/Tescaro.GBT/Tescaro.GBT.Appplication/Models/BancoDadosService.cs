@@ -1,12 +1,14 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tescaro.GBT.Appplication.Interfaces;
+using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.Domain.Models;
+using Tescaro.GBT.Appplication.Interfaces;
 using Tescaro.GBT.Repository.Interfaces;
-using Tescaro.GBT.Repository.Repositories;
+
 
 namespace Tescaro.GBT.Appplication.Models
 {
@@ -14,21 +16,26 @@ namespace Tescaro.GBT.Appplication.Models
     {
         private readonly IGBTRepository _GBTRepository;
         private readonly IBancoDadosRepository _bancoDadosRepository;
+        private readonly IMapper _mapper;
 
-        public BancoDadosService(IGBTRepository gBTRepository, IBancoDadosRepository bancoDadosRepository)
+        public BancoDadosService(IGBTRepository gBTRepository, IBancoDadosRepository bancoDadosRepository, IMapper mapper)
         {
             _GBTRepository = gBTRepository;
             _bancoDadosRepository = bancoDadosRepository;
+            _mapper = mapper;
         }
 
-        public async Task<BancoDados> AdicionarBancoDados(BancoDados bancoDados)
+        public async Task<BancoDadosDTO> AdicionarBancoDados(BancoDadosDTO model)
         {
             try
             {
+                var bancoDados = _mapper.Map<BancoDados>(model);
                 _GBTRepository.Adicionar<BancoDados>(bancoDados);
+
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
-                    return await _bancoDadosRepository.GetBancoDadosById(bancoDados.Id);
+                    var retorno = await _bancoDadosRepository.GetBancoDadosById(bancoDados.Id);
+                    return _mapper.Map<BancoDadosDTO>(bancoDados);
                 }
                 return null;
             }
@@ -38,20 +45,24 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<BancoDados> AtualizarBancoDados(long bancoDadosId, BancoDados model)
+        public async Task<BancoDadosDTO> AtualizarBancoDados(long bancoDadosId, BancoDadosDTO model)
         {
             try
             {
                 var bancoDado = await _bancoDadosRepository.GetBancoDadosById(bancoDadosId);
+             
                 if (bancoDado == null) return null;
 
                 model.Id = bancoDado.Id;
+
+                _mapper.Map(model, bancoDado);
 
                 _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
-                    return await _bancoDadosRepository.GetBancoDadosById(model.Id);
+                    var retorno = await _bancoDadosRepository.GetBancoDadosById(bancoDado.Id);
+                    return _mapper.Map<BancoDadosDTO>(retorno);
                 }
 
                 return null;
@@ -80,13 +91,17 @@ namespace Tescaro.GBT.Appplication.Models
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<List<BancoDados>> GetTodosBancoDados()
+        public async Task<List<BancoDadosDTO>> GetTodosBancoDados()
         {
             try
             {
                 var bancosDados = await _bancoDadosRepository.GetTodosBancoDados();
+
                 if (bancosDados == null) return null;
-                return bancosDados;
+
+                var resultado = _mapper.Map<List<BancoDadosDTO>>(bancosDados);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -94,13 +109,17 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<BancoDados> GetBancoDadosById(long bancoDadosId)
+        public async Task<BancoDadosDTO> GetBancoDadosById(long bancoDadosId)
         {
             try
             {
                 var bancosDados = await _bancoDadosRepository.GetBancoDadosById(bancoDadosId);
+                
                 if (bancosDados == null) return null;
-                return bancosDados;
+
+                var resultado = _mapper.Map<BancoDadosDTO>(bancosDados);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -109,13 +128,17 @@ namespace Tescaro.GBT.Appplication.Models
         }
 
 
-        public async Task<List<BancoDados>> GetTodosBancoDadosByCliente(long clienteId)
+        public async Task<List<BancoDadosDTO>> GetTodosBancoDadosByCliente(long clienteId)
         {
             try
             {
                 var bancosDados = await _bancoDadosRepository.GetTodosBancoDadosByCliente(clienteId);
+                
                 if (bancosDados == null) return null;
-                return bancosDados;
+                
+                var resultado = _mapper.Map<List<BancoDadosDTO>>(bancosDados);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -123,13 +146,17 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<List<BancoDados>> GetTodosBancoDadosByNome(string nome)
+        public async Task<List<BancoDadosDTO>> GetTodosBancoDadosByNome(string nome)
         {
             try
             {
                 var bancosDados = await _bancoDadosRepository.GetTodosBancoDadosByNome(nome);
+                
                 if (bancosDados == null) return null;
-                return bancosDados;
+
+                var resultado = _mapper.Map<List<BancoDadosDTO>>(bancosDados);
+
+                return resultado;
             }
             catch (Exception ex)
             {

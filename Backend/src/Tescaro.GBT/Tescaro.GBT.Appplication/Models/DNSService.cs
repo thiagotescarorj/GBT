@@ -1,8 +1,10 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.Appplication.Interfaces;
 using Tescaro.GBT.Domain.Models;
 using Tescaro.GBT.Repository.Interfaces;
@@ -14,20 +16,26 @@ namespace Tescaro.GBT.Appplication.Models
     {
         private readonly IGBTRepository _GBTRepository;
         private readonly IDNSRepository _dnsRepository;
+        private readonly IMapper _mapper;
 
-        public DNSService(IGBTRepository gBTRepository, IDNSRepository dnsRepository)
+        public DNSService(IGBTRepository gBTRepository, IDNSRepository dnsRepository, IMapper mapper)
         {
             _GBTRepository = gBTRepository;
             _dnsRepository = dnsRepository;
+            _mapper = mapper;
         }
-        public async Task<DNS> AdicionarDNS(DNS dns)
+        public async Task<DNSDTO> AdicionarDNS(DNSDTO model)
         {
             try
             {
+                var dns = _mapper.Map<DNS>(model);
+
                 _GBTRepository.Adicionar<DNS>(dns);
+                
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
-                    return await _dnsRepository.GetDNSById(dns.Id);
+                    var retorno = await _dnsRepository.GetDNSById(dns.Id);
+                    return _mapper.Map<DNSDTO>(retorno);
                 }
                 return null;
             }
@@ -37,7 +45,7 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<DNS> AtualizarDNS(long dnsId, DNS model)
+        public async Task<DNSDTO> AtualizarDNS(long dnsId, DNSDTO model)
         {
             try
             {
@@ -46,11 +54,15 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = dns.Id;
 
+                _mapper.Map(model, dns);
+
                 _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
-                    return await _dnsRepository.GetDNSById(model.Id);
+                    var retorno = await _dnsRepository.GetDNSById(dns.Id);
+
+                    return _mapper.Map<DNSDTO>(retorno);
                 }
 
                 return null;
@@ -80,13 +92,15 @@ namespace Tescaro.GBT.Appplication.Models
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<List<DNS>> GetTodosDNS()
+        public async Task<List<DNSDTO>> GetTodosDNS()
         {
             try
             {
                 var dnsList = await _dnsRepository.GetTodosDNS();
                 if (dnsList == null) return null;
-                return dnsList;
+
+                var retorno = _mapper.Map<List<DNSDTO>>(dnsList);
+                return retorno;
             }
             catch (Exception ex)
             {
@@ -94,13 +108,14 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<DNS> GetDNSById(long dnsId)
+        public async Task<DNSDTO> GetDNSById(long dnsId)
         {
             try
             {
                 var dns = await _dnsRepository.GetDNSById(dnsId);
                 if (dns == null) return null;
-                return dns;
+                var retorno = _mapper.Map<DNSDTO>(dns);
+                return retorno;
             }
             catch (Exception ex)
             {
@@ -109,13 +124,14 @@ namespace Tescaro.GBT.Appplication.Models
         }
 
 
-        public async Task<List<DNS>> GetTodosDNSByCliente(long clienteId)
+        public async Task<List<DNSDTO>> GetTodosDNSByCliente(long clienteId)
         {
             try
             {
                 var dnsList = await _dnsRepository.GetTodosDNSByCliente(clienteId);
                 if (dnsList == null) return null;
-                return dnsList;
+                var retorno = _mapper.Map<List<DNSDTO>>(dnsList);
+                return retorno;
             }
             catch (Exception ex)
             {
@@ -123,13 +139,14 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<List<DNS>> GetTodosDNSByNome(string nome)
+        public async Task<List<DNSDTO>> GetTodosDNSByNome(string nome)
         {
             try
             {
                 var dnsList = await _dnsRepository.GetTodosDNSByNome(nome);
                 if (dnsList == null) return null;
-                return dnsList;
+                var retorno = _mapper.Map<List<DNSDTO>>(dnsList);
+                return retorno;
             }
             catch (Exception ex)
             {

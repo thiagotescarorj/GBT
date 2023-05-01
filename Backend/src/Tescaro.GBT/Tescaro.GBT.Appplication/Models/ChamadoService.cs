@@ -1,8 +1,10 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.Appplication.Interfaces;
 using Tescaro.GBT.Domain.Models;
 using Tescaro.GBT.Repository.Interfaces;
@@ -13,21 +15,29 @@ namespace Tescaro.GBT.Appplication.Models
     {
         private readonly IGBTRepository _GBTRepository;
         private readonly IChamadoRepository _chamadoRepository;
+        private readonly IMapper _mapper;
 
-        public ChamadoService(IGBTRepository gBTRepository, IChamadoRepository chamadoRepository)
+        public ChamadoService(IGBTRepository gBTRepository,
+                              IChamadoRepository chamadoRepository,
+                              IMapper mapper)
         {
             _GBTRepository = gBTRepository;
             _chamadoRepository = chamadoRepository;
+            _mapper = mapper;
         }
 
-        public async Task<Chamado> AdicionarChamado(Chamado chamado)
+        public async Task<ChamadoDTO> AdicionarChamado(ChamadoDTO model)
         {
             try
             {
+                var chamado = _mapper.Map<Chamado>(model);
+
                 _GBTRepository.Adicionar<Chamado>(chamado);
+
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
-                    return await _chamadoRepository.GetChamadoById(chamado.Id);
+                    var retorno = await _chamadoRepository.GetChamadoById(chamado.Id);
+                    return _mapper.Map<ChamadoDTO>(retorno);
                 }
                 return null;
             }
@@ -38,7 +48,7 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<Chamado> AtualizarChamado(long chamadoId, Chamado model)
+        public async Task<ChamadoDTO> AtualizarChamado(long chamadoId, ChamadoDTO model)
         {
             try
             {
@@ -47,11 +57,14 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = chamado.Id;
 
+                _mapper.Map(model, chamado);
+
                 _GBTRepository.Atualizar(model);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {
-                    return await _chamadoRepository.GetChamadoById(model.Id);
+                    var retorno = await _chamadoRepository.GetChamadoById(chamado.Id);
+                    return _mapper.Map<ChamadoDTO>(retorno);
                 }
 
                 return null;
@@ -82,13 +95,16 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<List<Chamado>> GetTodosChamados()
+        public async Task<List<ChamadoDTO>> GetTodosChamados()
         {
             try
             {
-                var chamados =  _chamadoRepository.GetTodosChamados();
+                var chamados = _chamadoRepository.GetTodosChamados();
                 if (chamados == null) return null;
-                return chamados;
+
+                var resultado = _mapper.Map<List<ChamadoDTO>>(chamados);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -96,27 +112,33 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<Chamado> GetChamadoById(long chamadoId)
+        public async Task<ChamadoDTO> GetChamadoById(long chamadoId)
         {
             try
             {
                 var chamado = await _chamadoRepository.GetChamadoById(chamadoId);
                 if (chamado == null) return null;
-                return chamado;
+
+                var resultado = _mapper.Map<ChamadoDTO>(chamado);
+
+                return resultado;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-        }       
+        }
 
-        public async Task<List<Chamado>> GetTodosChamadosByBancoDados(long bancoDadosId)
+        public async Task<List<ChamadoDTO>> GetTodosChamadosByBancoDados(long bancoDadosId)
         {
             try
             {
                 var chamados = await _chamadoRepository.GetTodosChamadosByBancoDados(bancoDadosId);
                 if (chamados == null) return null;
-                return chamados;
+
+                var resultado = _mapper.Map<List<ChamadoDTO>>(chamados);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -124,13 +146,16 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<List<Chamado>> GetTodosChamadosByCliente(long clienteId)
+        public async Task<List<ChamadoDTO>> GetTodosChamadosByCliente(long clienteId)
         {
             try
             {
                 var chamados = await _chamadoRepository.GetTodosChamadosByCliente(clienteId);
                 if (chamados == null) return null;
-                return chamados;
+
+                var resultado = _mapper.Map<List<ChamadoDTO>>(chamados);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -138,13 +163,17 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<List<Chamado>> GetTodosChamadosByDns(long dnsId)
+        public async Task<List<ChamadoDTO>> GetTodosChamadosByDns(long dnsId)
         {
             try
             {
                 var chamados = await _chamadoRepository.GetTodosChamadosByDns(dnsId);
-                if (chamados == null) return null;
-                return chamados;
+
+                var resultado = _mapper.Map<List<ChamadoDTO>>(chamados);
+
+                if (resultado == null) return null;
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -152,13 +181,16 @@ namespace Tescaro.GBT.Appplication.Models
             }
         }
 
-        public async Task<List<Chamado>> GetTodosChamadosByNumero(string numero)
+        public async Task<List<ChamadoDTO>> GetTodosChamadosByNumero(string numero)
         {
             try
             {
                 var chamados = await _chamadoRepository.GetTodosChamadosByNumero(numero);
                 if (chamados == null) return null;
-                return chamados;
+
+                var resultado = _mapper.Map<List<ChamadoDTO>>(chamados);
+
+                return resultado;
             }
             catch (Exception ex)
             {

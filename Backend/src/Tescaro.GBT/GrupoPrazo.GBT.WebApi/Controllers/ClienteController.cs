@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.Appplication.Interfaces;
 using Tescaro.GBT.Domain.Models;
 using Tescaro.GBT.Repository;
@@ -92,7 +93,7 @@ namespace Tescaro.GBT.API.Controllers
        
 
         [HttpPost]
-        public async Task<IActionResult> Post(Cliente cliente)
+        public async Task<IActionResult> Post(ClienteDTO cliente)
         {
             try
             {

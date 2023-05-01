@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.Appplication.Interfaces;
-using Tescaro.GBT.Domain.Models;
-using Tescaro.GBT.Repository;
 
 namespace Tescaro.GBT.API.Controllers
 {
@@ -29,7 +28,7 @@ namespace Tescaro.GBT.API.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Chamado>>> GetAll()
+        public async Task<ActionResult<IEnumerable<ChamadoDTO>>> GetAll()
         {
             try
             {
@@ -75,7 +74,7 @@ namespace Tescaro.GBT.API.Controllers
             }
         }
 
-        [HttpGet("{numero}")]
+        [HttpGet("chamado/{numero}")]
         public async Task<IActionResult> GetByNumero(string numero)
         {
             try
@@ -98,7 +97,7 @@ namespace Tescaro.GBT.API.Controllers
             }
         }
 
-        [HttpGet("{clienteId}")]
+        [HttpGet("cliente/{clienteId}")]
         public async Task<IActionResult> GetByCliente(long clienteId)
         {
             try
@@ -126,7 +125,7 @@ namespace Tescaro.GBT.API.Controllers
             }
         }
 
-        [HttpGet("{dnsId}")]
+        [HttpGet("dns/{dnsId}")]
         public async Task<IActionResult> GetByDNS(long dnsId)
         {
             try
@@ -154,7 +153,7 @@ namespace Tescaro.GBT.API.Controllers
             }
         }
 
-        [HttpGet("{bancoDadosId}")]
+        [HttpGet("bancoDados/{bancoDadosId}")]
         public async Task<IActionResult> GetByBancoDados(long bancoDadosId)
         {
             try
@@ -183,7 +182,7 @@ namespace Tescaro.GBT.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Chamado chamado)
+        public async Task<IActionResult> Post(ChamadoDTO chamado)
         {
             try
             {
@@ -206,7 +205,7 @@ namespace Tescaro.GBT.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(long id)
+        public async Task<IActionResult> Put(long id, ChamadoDTO model)
         {
             try
             {
@@ -218,7 +217,7 @@ namespace Tescaro.GBT.API.Controllers
                 }
                 else
                 {
-                    await _chamadoService.AtualizarChamado(id, chamado);
+                    await _chamadoService.AtualizarChamado(id, model);
 
                     return Ok(chamado);
                 }

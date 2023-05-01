@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Tescaro.GBT.Domain.Models;
+﻿using Tescaro.GBT.API.DTOs;
 
 namespace Tescaro.GBT.Appplication.Interfaces
 {
     public interface IChamadoService
     {
-        Task<Chamado> AdicionarChamado(Chamado chamado);
-        Task<Chamado> AtualizarChamado(long chamadoId, Chamado model);
+        Task<ChamadoDTO> AdicionarChamado(ChamadoDTO chamado);
+        Task<ChamadoDTO> AtualizarChamado(long chamadoId, ChamadoDTO model);
         Task<bool> ExcluirChamado(long chamadoId);
-        Task<List<Chamado>> GetTodosChamados();
-        Task<Chamado> GetChamadoById(long chamadoId);
-        Task<List<Chamado>> GetTodosChamadosByNumero(string numero);
-        Task<List<Chamado>> GetTodosChamadosByCliente(long clienteId);
-        Task<List<Chamado>> GetTodosChamadosByDns(long dnsId);
-        Task<List<Chamado>> GetTodosChamadosByBancoDados(long bancoDadosId);
+        Task<List<ChamadoDTO>> GetTodosChamados();
+        Task<ChamadoDTO> GetChamadoById(long chamadoId);
+        Task<List<ChamadoDTO>> GetTodosChamadosByNumero(string numero);
+        Task<List<ChamadoDTO>> GetTodosChamadosByCliente(long clienteId);
+        Task<List<ChamadoDTO>> GetTodosChamadosByDns(long dnsId);
+        Task<List<ChamadoDTO>> GetTodosChamadosByBancoDados(long bancoDadosId);
     }
 }

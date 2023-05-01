@@ -76,3 +76,5 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
