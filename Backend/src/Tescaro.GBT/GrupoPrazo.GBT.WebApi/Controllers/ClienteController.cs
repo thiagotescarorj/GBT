@@ -116,7 +116,7 @@ namespace Tescaro.GBT.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(long id, Cliente model)
+        public async Task<IActionResult> Put(long id, ClienteDTO model)
         {
             try
             {

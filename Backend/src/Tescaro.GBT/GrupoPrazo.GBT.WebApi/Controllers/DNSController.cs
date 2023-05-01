@@ -124,7 +124,7 @@ namespace Tescaro.GBT.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(long id)
+        public async Task<IActionResult> Put(long id, DNSDTO model)
         {
             try
             {

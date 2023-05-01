@@ -11,10 +11,8 @@ namespace Tescaro.GBT.Domain.Models
     public class Cliente
     {
         public long Id { get; set; }
-        [MaxLength(255)]
         public string Nome { get; set; }
 
-        [Display(Name = "Ativo")]
         public bool IsAtivo { get; set; }
         public DateTime DataHoraCadastro { get; set; }
 

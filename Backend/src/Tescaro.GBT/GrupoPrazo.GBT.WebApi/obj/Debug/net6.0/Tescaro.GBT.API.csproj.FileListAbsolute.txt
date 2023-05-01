@@ -5,7 +5,11 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.API.runtimeconfig.json
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.API.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Tescaro.GBT.API.pdb
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -22,6 +26,8 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -56,6 +62,7 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.AssemblyInfoInputs.cache
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.AssemblyInfo.cs
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.csproj.CoreCompileInputs.cache
+C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.Tescaro.GBT.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.Tescaro.GBT.API.props
@@ -71,10 +78,3 @@ C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.G
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.pdb
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.genruntimeconfig.cache
 C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\ref\Tescaro.GBT.API.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\AutoMapper.dll
-C:\Users\suporte\Documents\Projetos\GBT\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

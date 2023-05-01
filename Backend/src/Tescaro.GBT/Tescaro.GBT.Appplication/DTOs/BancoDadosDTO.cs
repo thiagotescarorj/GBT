@@ -15,5 +15,8 @@ namespace Tescaro.GBT.API.DTOs
         [Display(Name = "Data Hora Cadastro")]
         public string? DataHoraCadastro { get; set; }
 
+        public long ClienteId { get; set; }
+
+
     }
 }

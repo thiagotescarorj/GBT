@@ -10,7 +10,7 @@ namespace Tescaro.GBT.API.Helpers
         {
             CreateMap<Cliente, ClienteDTO>().ReverseMap();
             CreateMap<DNS, DNSDTO>().ReverseMap();
-            CreateMap<BancoDadosDTO, BancoDadosDTO>().ReverseMap();    
+            CreateMap<BancoDados, BancoDadosDTO>().ReverseMap();    
             CreateMap<Chamado, ChamadoDTO>().ReverseMap();
         }
     }
