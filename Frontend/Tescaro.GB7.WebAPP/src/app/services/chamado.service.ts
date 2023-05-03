@@ -10,31 +10,42 @@ export class ChamadoService {
 
   constructor(private http: HttpClient) { }
 
-   getTodosChamados(): Observable<Chamado[]>{
+   public getTodosChamados(): Observable<Chamado[]>{
     return this.http.get<Chamado[]>(this.baseURL);
   }
 
-  getChamadoById(id: number): Observable<Chamado>{
+  public getChamadoById(id: number): Observable<Chamado>{
     return this.http.get<Chamado>(`${this.baseURL}/${id}`);
   }
 
-  getChamadosByNumero(numero: string): Observable<Chamado[]>{
+  public getChamadosByNumero(numero: string): Observable<Chamado[]>{
     return this.http.get<Chamado[]>(`${this.baseURL}/${numero}`)
   }
 
-
-  getChamadosByCliente(clienteId: number): Observable<Chamado[]>{
+  public getChamadosByCliente(clienteId: number): Observable<Chamado[]>{
     return this.http.get<Chamado[]>(`${this.baseURL}/${clienteId}`)
   }
 
-
-  getChamadosByDNS(dnsId: number): Observable<Chamado[]>{
+  public getChamadosByDNS(dnsId: number): Observable<Chamado[]>{
     return this.http.get<Chamado[]>(`${this.baseURL}/${dnsId}`)
   }
 
-
-  getChamadosByBancoDados(bancoDadosId: number): Observable<Chamado[]>{
+  public getChamadosByBancoDados(bancoDadosId: number): Observable<Chamado[]>{
     return this.http.get<Chamado[]>(`${this.baseURL}/${bancoDadosId}`)
   }
+
+  public post(chamado: Chamado): Observable<Chamado>{
+    return this.http.post<Chamado>(this.baseURL, chamado);
+  }
+
+  public put(id: number, chamado: Chamado): Observable<Chamado>{
+    return this.http.post<Chamado>(`${this.baseURL}/${id}`, chamado);
+  }
+
+  public delete(id: number): Observable<string>{
+    return this.http.delete<string>(`${this.baseURL}/${id}`);
+  }
+
+
 
 }

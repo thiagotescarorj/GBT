@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BsLocaleService } from 'ngx-bootstrap/datepicker';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 import { Chamado } from 'src/app/models/Chamado';
 import { ChamadoService } from 'src/app/services/chamado.service';
 
@@ -19,7 +21,9 @@ export class ChamadoEditarComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private localeService: BsLocaleService,
     private router: ActivatedRoute,
-    private chmadoService: ChamadoService)
+    private chmadoService: ChamadoService,
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService)
     {
       this.localeService.use('pt-br');
     }
@@ -28,14 +32,20 @@ export class ChamadoEditarComponent implements OnInit {
       const chamadoIdParam = this.router.snapshot.paramMap.get('id');
 
       if(chamadoIdParam != null){
+        this.spinner.show();
         this.chmadoService.getChamadoById(+chamadoIdParam).subscribe(
           {
             next: (chamado: Chamado) => {
                                         this.chamado = {...chamado};
                                         this.chamadoForm.patchValue(this.chamado);
                                         },
-            error: () => {},
-            complete:  () => {}
+            error: () => {
+              this.spinner.hide();
+              this.toastr.error("Erro ao carregar o Chamado.", "Erro!")
+            },
+            complete:  () => {
+              this.spinner.hide();
+            }
           });
       }
 

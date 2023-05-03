@@ -25,6 +25,7 @@ import { ChamadoService } from "src/app/services/chamado.service";
 })
 export class ChamadoListaComponent {
   modalRef?: BsModalRef;
+  public chamadoNumero = '';
 
   public Chamados: any = [{
     id: '',
@@ -127,7 +128,9 @@ export class ChamadoListaComponent {
 
   message?: string;
 
-  openModal(template: TemplateRef<any>) {
+  openModal(event: any, template: TemplateRef<any>, chamadoNumero: string) {
+    event.stopPropagation();
+    this.chamadoNumero = chamadoNumero;
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
