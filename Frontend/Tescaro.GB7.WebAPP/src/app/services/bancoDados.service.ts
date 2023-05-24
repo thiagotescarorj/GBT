@@ -26,4 +26,18 @@ export class BancoDadosService {
   getBancoDadossByCliente(clienteId: number): Observable<BancoDados[]>{
     return this.http.get<BancoDados[]>(`${this.baseURL}/${clienteId}`)
   }
+
+  public post(bancoDados: BancoDados): Observable<BancoDados>{
+    return this.http.post<BancoDados>(this.baseURL, bancoDados);
+  }
+
+  public put(id: number, bancoDados: BancoDados): Observable<BancoDados>{
+    return this.http.post<BancoDados>(`${this.baseURL}/${id}`, bancoDados);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.http.delete(`${this.baseURL}/${id}`);
+  }
+
+
 }

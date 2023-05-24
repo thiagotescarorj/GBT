@@ -32,19 +32,19 @@
 
     </thead>
     <tbody *ngIf="DNSList">
-      <tr *ngFor="let cliente of DNSListFiltrados" (click)="detalheDNS(cliente.id)" style="cursor:pointer">
-        <td>{{cliente.id}}</td>
-        <td>{{cliente.numero}}</td>
-        <td>{{cliente.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
-        <td>{{cliente.dataHoraCadastro | DateTimeFormat}}</td>
+      <tr *ngFor="let dns of DNSListFiltrados" (click)="detalheDNS(dns.id)" style="cursor:pointer">
+        <td>{{dns.id}}</td>
+        <td>{{dns.numero}}</td>
+        <td>{{dns.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
+        <td>{{dns.dataHoraCadastro | DateTimeFormat}}</td>
         <td class="d-flex justify-content-end">
-          <!-- <button type="button" class="btn btn-primary btn-sm me-2 " title="Detalhes" (click)="detalheCliente(cliente.id)">
+          <!-- <button type="button" class="btn btn-primary btn-sm me-2 " title="Detalhes" (click)="detalheCliente(dns.id)">
             <i class="fas fa-list"></i>
           </button> -->
           <button type="button" class="btn btn-primary btn-sm me-2 " title="Editar">
             <i class="fas fa-edit"></i>
           </button>
-          <button type="button" class="btn btn-danger btn-sm" title="Excluir" (click)="openModal(template)">
+          <button type="button" class="btn btn-danger btn-sm" title="Excluir" (click)="openModal($event,template,dns.nome,dns.id)">
             <i class="fa fa-trash"></i>
           </button>
         </td>
@@ -53,7 +53,7 @@
     <tfoot *ngIf="!DNSList">
       <tr class="text-center">
         <td colspan="8">
-          <h4>Nenhum cliente encontrado.</h4>
+          <h4>Nenhum dns encontrado.</h4>
         </td>
       </tr>
     </tfoot>

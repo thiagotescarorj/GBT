@@ -26,6 +26,7 @@ import { ChamadoService } from "src/app/services/chamado.service";
 export class ChamadoListaComponent {
   modalRef?: BsModalRef;
   public chamadoNumero = '';
+  public chamadoId = '';
 
   public Chamados: any = [{
     id: '',
@@ -79,72 +80,89 @@ export class ChamadoListaComponent {
         const dataEnvioHomologacaoStr = chamado.dataEnvioHomologacao == null ? "" : chamado.dataEnvioHomologacao;
         const dataPublicacaoStr = chamado.dataPublicacao == null ? "" : chamado.dataPublicacao;
         return chamado.numero.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || isAtivoStr.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || dataHoraCadastroStr.indexOf(filtrarPor) !== -1
-          || dataRecebimentoStr.indexOf(filtrarPor) !== -1
-          || dataEnvioHomologacaoStr.indexOf(filtrarPor) !== -1
-          || dataPublicacaoStr.indexOf(filtrarPor) !== -1;
+        || isAtivoStr.toLocaleLowerCase().indexOf(filtrarPor) !== -1
+        || dataHoraCadastroStr.indexOf(filtrarPor) !== -1
+        || dataRecebimentoStr.indexOf(filtrarPor) !== -1
+        || dataEnvioHomologacaoStr.indexOf(filtrarPor) !== -1
+        || dataPublicacaoStr.indexOf(filtrarPor) !== -1;
       }
-    );
-  }
-
-  constructor(
-    private chamadoService: ChamadoService,
-    private modalService: BsModalService,
-    private toastr: ToastrService,
-    private spinner: NgxSpinnerService,
-    private router: Router
-  ){}
-
-  public ngOnInit(): void{
-    this.spinner.show();
-    this.getChamados();
-  }
-
-
-
-  public getChamados(): void{
-    const Observer = {
-      next:(_chamado: Chamado[]) => {
-        this.Chamados = _chamado;
-        this.ChamadosFiltrados = this.Chamados;
-      },
-      error: (error: any) => {
-        this.spinner.hide();
-        this.toastr.error('Erro ao carregar os Chamados', 'Erro!')
-      },
-      complete: () => this.spinner.hide()
-
+      );
     }
 
-    this.chamadoService.getTodosChamados().subscribe(Observer);
+    constructor(
+      private chamadoService: ChamadoService,
+      private modalService: BsModalService,
+      private toastr: ToastrService,
+      private spinner: NgxSpinnerService,
+      private router: Router
+      ){}
+
+      public ngOnInit(): void{
+        this.spinner.show();
+        this.getChamados();
+      }
 
 
 
-  }
+      public getChamados(): void{
+        const Observer = {
+          next:(_chamado: Chamado[]) => {
+            this.Chamados = _chamado;
+            this.ChamadosFiltrados = this.Chamados;
+          },
+          error: (error: any) => {
+            this.spinner.hide();
+            this.toastr.error('Erro ao carregar os Chamados', 'Erro!')
+          },
+          complete: () => this.spinner.hide()
+
+        }
+
+        this.chamadoService.getTodosChamados().subscribe(Observer);
 
 
-  // Modal
 
-  message?: string;
+      }
 
-  openModal(event: any, template: TemplateRef<any>, chamadoNumero: string) {
-    event.stopPropagation();
-    this.chamadoNumero = chamadoNumero;
-    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
-  }
 
-  confirm(): void {
-    this.modalRef?.hide();
-    this.toastr.success('Chamado excluído com sucesso', 'Deletado!')
-  }
+      // Modal
 
-  decline(): void {
-    this.modalRef?.hide();
-  }
+      message?: string;
 
-  detalheChamado(id: number): void{
-    this.router.navigate([`chamados/editar/${id}`]);  }
+      openModal(event: any, template: TemplateRef<any>, chamadoNumero: string, chamadoId: string) {
+        event.stopPropagation();
+        this.chamadoNumero = chamadoNumero;
+        this.chamadoId = chamadoId;
+        this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+      }
 
-}
+      confirm(): void {
+        this.modalRef?.hide();
+        this.spinner.show();
+
+        this.chamadoService.delete(parseFloat(this.chamadoId)).subscribe(
+          (result: any) => {
+            console.log(result);
+            this.toastr.success(`O Chamado ${this.chamadoNumero} foi deletado com sucesso.`, "Deletado!");
+            this.spinner.hide();
+            this.getChamados();
+
+          },
+          (error: any) => {
+            console.error(error);
+            this.toastr.error(`Erro ao tentar deletar o chamado de ID ${this.chamadoId}`, `Erro!`)
+          },
+          () => this.spinner.hide()
+          );
+
+        }
+
+        decline(): void {
+          this.modalRef?.hide();
+        }
+
+        detalheChamado(id: number): void{
+          this.router.navigate([`chamados/editar/${id}`]);  }
+
+        }
 

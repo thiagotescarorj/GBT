@@ -14,6 +14,8 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class ClienteListaComponent {
 
   modalRef?: BsModalRef;
+  clienteId = '';
+  clienteName = '';
 
   public Clientes: any = [{
     id: '',
@@ -101,13 +103,31 @@ export class ClienteListaComponent {
 
   message?: string;
 
-  openModal(template: TemplateRef<any>) {
+  openModal(event: any, template: TemplateRef<any>, clienteName: string, clienteId: string ) {
+    event.stopPropagation();
+    this.clienteName = clienteName;
+    this.clienteId = clienteId;
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
   confirm(): void {
     this.modalRef?.hide();
-    this.toastr.success('Cliente excluído com sucesso', 'Deletado!')
+    this.spinner.show();
+
+        this.clienteService.delete(parseFloat(this.clienteId)).subscribe(
+          (result: any) => {
+            console.log(result);
+            this.toastr.success(`O Cliente ${this.clienteName} foi deletado com sucesso.`, "Deletado!");
+            this.spinner.hide();
+            this.getClientes();
+          },
+          (error: any) => {
+            console.error(error);
+            this.toastr.error(`Erro ao tentar deletar o cliente de ID ${this.clienteId}`, `Erro!`)
+          },
+          () => this.spinner.hide()
+          );
+
   }
 
   decline(): void {

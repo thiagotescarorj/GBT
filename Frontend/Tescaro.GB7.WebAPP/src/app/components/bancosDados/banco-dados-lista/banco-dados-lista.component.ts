@@ -14,6 +14,8 @@ import { BancoDadosService } from 'src/app/services/bancoDados.service';
 export class BancoDadosListaComponent {
 
   modalRef?: BsModalRef;
+  bancoDadosName ='';
+  bancoDadosId ='';
 
   public BancoDadosList: any = [{
     id: '',
@@ -104,13 +106,29 @@ export class BancoDadosListaComponent {
 
   message?: string;
 
-  openModal(template: TemplateRef<any>) {
+  openModal(event: any, template: TemplateRef<any>, bancoDadosName: string, bancoDadosId: string) {
+    event.stopPropagation();
+    this.bancoDadosName = bancoDadosName;
+    this.bancoDadosId = bancoDadosId;
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
   confirm(): void {
     this.modalRef?.hide();
-    this.toastr.success('Banco de Dados excluído com sucesso', 'Deletado!')
+    this.spinner.show();
+    this.bancoDadosService.delete(parseFloat(this.bancoDadosId)).subscribe(
+      (result: any) => {
+        console.log(result);
+        this.toastr.success(`O Banco de Dados ${this.bancoDadosName} foi deletado com sucesso.`);
+        this.spinner.hide();
+        this.getBancoDadosList();
+      },
+      (error: any) => {
+        console.error(error);
+        this.toastr.error(`Erro ao tentar deletar o Banco de Dados ${this.bancoDadosName}`);
+      },
+      () => this.spinner.hide()
+    );
   }
 
   decline(): void {

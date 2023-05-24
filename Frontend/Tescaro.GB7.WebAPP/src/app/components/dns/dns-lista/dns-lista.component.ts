@@ -14,6 +14,8 @@ import { DNSService } from 'src/app/services/dns.service';
 export class DnsListaComponent {
 
   modalRef?: BsModalRef;
+  dnsId = '';
+  dnsName = '';
 
   public DNSList: any = [{
     id: '',
@@ -26,7 +28,7 @@ export class DnsListaComponent {
     id: '',
     nome: '',
     isAtivo: '',
-    cliete: '',
+    cliente: '',
     dataHoraCadastro: '',
   }];
 
@@ -103,13 +105,29 @@ export class DnsListaComponent {
 
   message?: string;
 
-  openModal(template: TemplateRef<any>) {
+  openModal(evet: any, template: TemplateRef<any>, dnsnName: string, dnsId: string) {
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
   confirm(): void {
     this.modalRef?.hide();
-    this.toastr.success('DNS excluído com sucesso', 'Deletado!')
+
+    this.spinner.show();
+
+        this.dnsService.delete(parseFloat(this.dnsId)).subscribe(
+          (result: any) => {
+            console.log(result);
+            this.toastr.success(`O DNS ${this.dnsName} foi deletado com sucesso.`, "Deletado!");
+            this.spinner.hide();
+            this.getDNSList();
+
+          },
+          (error: any) => {
+            console.error(error);
+            this.toastr.error(`Erro ao tentar deletar o dns de ID ${this.dnsId}`, `Erro!`)
+          },
+          () => this.spinner.hide()
+          );
   }
 
   decline(): void {

@@ -18,4 +18,18 @@ export class DNSService {
   getDNSsByCliente(clienteId: number): Observable<DNS[]>{
     return this.http.get<DNS[]>(`${this.baseURL}/${clienteId}`)
   }
+
+  public post(dns: DNS): Observable<DNS>{
+    return this.http.post<DNS>(this.baseURL, dns);
+  }
+
+  public put(id: number, dns: DNS): Observable<DNS>{
+    return this.http.post<DNS>(`${this.baseURL}/${id}`, dns);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.http.delete(`${this.baseURL}/${id}`);
+  }
+
+
 }

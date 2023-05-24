@@ -42,8 +42,8 @@ export class ChamadoService {
     return this.http.post<Chamado>(`${this.baseURL}/${id}`, chamado);
   }
 
-  public delete(id: number): Observable<string>{
-    return this.http.delete<string>(`${this.baseURL}/${id}`);
+  public delete(id: number): Observable<any>{
+    return this.http.delete(`${this.baseURL}/${id}`);
   }
 
 

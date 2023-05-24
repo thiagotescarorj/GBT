@@ -237,7 +237,7 @@ namespace Tescaro.GBT.API.Controllers
             {
                 if (await _chamadoService.ExcluirChamado(id))
                 {
-                    return Ok($"Chamado ID:{id} deletado");
+                    return Ok(new  { message = $"Chamado ID:{id} deletado"});
                 }
                 else
                 {
