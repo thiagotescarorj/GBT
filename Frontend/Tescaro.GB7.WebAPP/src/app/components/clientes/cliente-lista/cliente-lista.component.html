@@ -34,7 +34,7 @@
     <tbody *ngIf="Clientes">
       <tr *ngFor="let cliente of ClientesFiltrados" (click)="detalheCliente(cliente.id)" style="cursor:pointer">
         <td>{{cliente.id}}</td>
-        <td>{{cliente.numero}}</td>
+        <td>{{cliente.nome}}</td>
         <td>{{cliente.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
         <td>{{cliente.dataHoraCadastro | DateTimeFormat}}</td>
         <td class="d-flex justify-content-end">

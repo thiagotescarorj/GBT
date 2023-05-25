@@ -17,7 +17,7 @@ namespace Tescaro.GBT.API.DTOs
         public string? IsAtividade { get; set; }
 
         [Display(Name = "Data Hora Cadastro")]
-        public string? DataHoraCadastro { get; set; }
+        public DateTime? DataHoraCadastro { get; set; }
 
         [Required(ErrorMessage = "O campo Cliente é obrigatório")]
         public long ClienteId { get; set; }

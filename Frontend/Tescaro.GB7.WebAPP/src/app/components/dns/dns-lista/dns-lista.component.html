@@ -34,7 +34,7 @@
     <tbody *ngIf="DNSList">
       <tr *ngFor="let dns of DNSListFiltrados" (click)="detalheDNS(dns.id)" style="cursor:pointer">
         <td>{{dns.id}}</td>
-        <td>{{dns.numero}}</td>
+        <td>{{dns.nome}}</td>
         <td>{{dns.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
         <td>{{dns.dataHoraCadastro | DateTimeFormat}}</td>
         <td class="d-flex justify-content-end">

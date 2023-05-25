@@ -15,6 +15,6 @@ namespace Tescaro.GBT.API.DTOs
         public string? IsAtivo { get; set; }
 
         [Display(Name = "Data Hora Cadastro")]
-        public string? DataHoraCadastro { get; set; }
+        public DateTime? DataHoraCadastro { get; set; }
     }
 }

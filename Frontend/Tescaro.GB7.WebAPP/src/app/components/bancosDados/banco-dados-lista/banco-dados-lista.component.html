@@ -34,7 +34,7 @@
     <tbody *ngIf="BancoDadosList">
       <tr *ngFor="let bancoDados of BancoDadosListFiltrados" (click)="detalheBancoDados(bancoDados.id)" style="cursor:pointer">
         <td>{{bancoDados.id}}</td>
-        <td>{{bancoDados.numero}}</td>
+        <td>{{bancoDados.nome}}</td>
         <td>{{bancoDados.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
         <td>{{bancoDados.dataHoraCadastro | DateTimeFormat}}</td>
         <td class="d-flex justify-content-end">

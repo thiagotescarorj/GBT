@@ -1,4 +1,4 @@
-USE [GBT]
+USE [GBTDb]
 GO
 
 INSERT INTO [dbo].[Cliente]
@@ -12,8 +12,6 @@ INSERT INTO [dbo].[Cliente]
 GO
 
 
-USE [GBT]
-GO
 
 INSERT INTO [dbo].[DNS]
            ([Nome]
@@ -29,8 +27,6 @@ INSERT INTO [dbo].[DNS]
            ,1)
 GO
 
-USE [GBT]
-GO
 
 INSERT INTO [dbo].[BancoDados]
            ([Nome]
@@ -44,8 +40,6 @@ INSERT INTO [dbo].[BancoDados]
            ,1)
 GO
 
-USE [GBT]
-GO
 
 INSERT INTO [dbo].[Chamado]
            ([Numero]
