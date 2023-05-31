@@ -21,11 +21,15 @@ export class ChamadoEditarComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private localeService: BsLocaleService,
     private router: ActivatedRoute,
-    private chmadoService: ChamadoService,
+    private chamadoService: ChamadoService,
     private spinner: NgxSpinnerService,
     private toastr: ToastrService)
     {
       this.localeService.use('pt-br');
+    }
+
+    public salvarAlteracao(): void{
+      this.spinner.show();
     }
 
     public carregamentoChamado(): void{
@@ -33,7 +37,7 @@ export class ChamadoEditarComponent implements OnInit {
 
       if(chamadoIdParam != null){
         this.spinner.show();
-        this.chmadoService.getChamadoById(+chamadoIdParam).subscribe(
+        this.chamadoService.getChamadoById(+chamadoIdParam).subscribe(
           {
             next: (chamado: Chamado) => {
                                         this.chamado = {...chamado};
@@ -84,7 +88,7 @@ export class ChamadoEditarComponent implements OnInit {
   }
 
   get dataRecebimento(){
-    return this.chamadoForm.get('bancoDados')
+    return this.chamadoForm.get('dataRecebimento')
   }
 
   submit(){
@@ -107,6 +111,8 @@ export class ChamadoEditarComponent implements OnInit {
       showWeekNumbers: false
      }
   }
+
+  
 
 }
 

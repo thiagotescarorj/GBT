@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { BsLocaleService } from 'ngx-bootstrap/datepicker';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { Chamado } from 'src/app/models/Chamado';
+import { ChamadoService } from 'src/app/services/chamado.service';
 
 @Component({
   selector: 'app-chamado-form',
@@ -9,12 +13,40 @@ import { BsLocaleService } from 'ngx-bootstrap/datepicker';
 })
 export class ChamadoFormComponent implements OnInit {
 
-  chamadoForm!: FormGroup;
+  chamado = {} as Chamado;
+  chamadoForm!:  FormGroup;
 
   constructor(private fb: FormBuilder,
-    private localeService: BsLocaleService)
+    private localeService: BsLocaleService,
+    private chamadoService: ChamadoService,
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService
+    )
     {
       this.localeService.use('pt-br');
+    }
+
+    public salvarAlteracao(): void{
+      this.spinner.show();
+  
+        
+        this.chamado = {... this.chamadoForm.value};
+
+        this.chamado.id = 0;
+
+        this.chamadoService.post(this.chamado).subscribe(
+          () => this.toastr.success("Chamado salvo com sucesso!", "Sucesso"),
+          (error: any) => {
+            console.log(error);
+            this.spinner.hide();
+            this.toastr.error("Erro ao salvar Chamado", "Erro");
+          },
+          () => this.spinner.hide()
+        );
+
+        this.router.
+
+      
     }
 
     ngOnInit(): void {
@@ -22,9 +54,9 @@ export class ChamadoFormComponent implements OnInit {
             id: new FormControl(''),
             numero: new FormControl('',[Validators.required]),
             dataRecebimento: new FormControl('',[Validators.required]),
-            dns: new FormControl('',[Validators.required]),
-            bancoDados: new FormControl('',[Validators.required]),
-            cliente: new FormControl('',[Validators.required]),
+            dnsId: new FormControl('',[Validators.required]),
+            bancoDadosId: new FormControl('',[Validators.required]),
+            clienteId: new FormControl('',[Validators.required]),
             dataEnvioHomologacao: new FormControl(''),
             dataPublicacao: new FormControl(''),
             observacao: new FormControl(''),
@@ -36,21 +68,40 @@ export class ChamadoFormComponent implements OnInit {
     return this.chamadoForm.get('numero')!;
   }
 
-  get cliente(){
-    return this.chamadoForm.get('cliente')!;
-  }
-
-  get dns(){
-    return this.chamadoForm.get('dns')
-  }
-
-  get bancoDados(){
-    return this.chamadoForm.get('bancoDados')
-  }
-
   get dataRecebimento(){
-    return this.chamadoForm.get('bancoDados')
+    return this.chamadoForm.get('dataRecebimento')!
   }
+
+  get dnsId(){
+    return this.chamadoForm.get('dnsId')!;
+  }
+
+  get bancoDadosId(){
+    return this.chamadoForm.get('bancoDadosId')!;
+  }
+
+  get clienteId(){
+    return this.chamadoForm.get('clienteId')!;
+  }
+
+  get dataEnvioHomologacao(){
+    return this.chamadoForm.get('dataEnvioHomologacao')!;
+  }
+
+  get dataPublicacao(){
+    return this.chamadoForm.get('dataPublicacao')!;
+  }
+
+  get observacao(){
+    return this.chamadoForm.get('observacao')!;
+  }
+
+  get scriptText(){
+    return this.chamadoForm.get('scriptText')!;
+  }
+
+
+
 
   submit(){
     if(this.chamadoForm.invalid){

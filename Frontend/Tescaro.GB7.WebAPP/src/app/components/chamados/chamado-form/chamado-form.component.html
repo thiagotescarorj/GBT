@@ -13,25 +13,25 @@
         </div>
         <div class="form-group col-md-6">
           <label>Cliente</label>
-          <input type="text" class="form-control" placeholder="">
-          <div *ngIf="numero.invalid && formDir.submitted" class="validation-error" >
-            <p *ngIf="numero.errors?.['required']">O campo Cliente é obrigatório</p>
+          <input type="text" class="form-control" formControlName="clienteId"  placeholder="">
+          <div *ngIf="clienteId.invalid && formDir.submitted" class="validation-error" >
+            <p *ngIf="clienteId.errors?.['required']">O campo Cliente é obrigatório</p>
           </div>
         </div>
       </div>
       <div class="row" style="margin-bottom: 10px;">
         <div class="form-group col-md-6">
           <label>DNS</label>
-          <input type="text" class="form-control" placeholder="">
-          <div *ngIf="numero.invalid && formDir.submitted" class="validation-error" >
-            <p *ngIf="numero.errors?.['required']">O campo DNS é obrigatório</p>
+          <input type="text" class="form-control" formControlName="dnsId"  placeholder="">
+          <div *ngIf="dnsId.invalid && formDir.submitted" class="validation-error" >
+            <p *ngIf="dnsId.errors?.['required']">O campo DNS é obrigatório</p>
           </div>
         </div>
         <div class="form-group col-md-6">
           <label>Banco de Dados</label>
-          <input type="text" class="form-control" placeholder="">
-          <div *ngIf="numero.invalid && formDir.submitted" class="validation-error" >
-            <p *ngIf="numero.errors?.['required']">O campo Banco de Dados é obrigatório</p>
+          <input type="text" class="form-control" formControlName="bancoDadosId"  placeholder="">
+          <div *ngIf="bancoDadosId.invalid && formDir.submitted" class="validation-error" >
+            <p *ngIf="bancoDadosId.errors?.['required']">O campo Banco de Dados é obrigatório</p>
           </div>
         </div>
       </div>
@@ -40,17 +40,19 @@
           <label>Data Recebimento</label>
           <input type="datetime"
           class="form-control"
+          formControlName="dataRecebimento" 
           placeholder=""
           bsDatepicker
           [bsConfig]="bsConfig">
-          <div *ngIf="numero.invalid && formDir.submitted" class="validation-error" >
-            <p *ngIf="numero.errors?.['required']">O campo Data Recebimento é obrigatório</p>
+          <div *ngIf="dataRecebimento.invalid && formDir.submitted" class="validation-error" >
+            <p *ngIf="dataRecebimento.errors?.['required']">O campo Data Recebimento é obrigatório</p>
           </div>
         </div>
         <div class="form-group col-md-4">
           <label>Data Homologação</label>
           <input type="datetime"
           class="form-control"
+          formControlName="dataEnvioHomologacao" 
           placeholder=""
           bsDatepicker
           [bsConfig]="bsConfig">
@@ -59,6 +61,7 @@
           <label>Data Publicação</label>
           <input type="datetime"
           class="form-control"
+          formControlName="dataPublicacao" 
           placeholder=""
           bsDatepicker
           [bsConfig]="bsConfig">
@@ -67,11 +70,11 @@
       <div class="row" style="margin-bottom: 10px;">
         <div class="form-group col-md-6">
           <label>Observação</label>
-          <input type="text" class="form-control" placeholder="(000) 90000-0000">
+          <input type="text" class="form-control" formControlName="observacao"  placeholder="">
         </div>
         <div class="form-group col-md-6">
           <label>Script</label>
-          <input type="text" class="form-control" placeholder="e-mail">
+          <input type="text" class="form-control" formControlName="scriptText"  placeholder="">
         </div>
       </div>
     </div>
@@ -80,7 +83,7 @@
         <button class="btn btn-outline-danger me-auto border" routerLink="/chamados/lista">
           Cancelar Alteração
         </button>
-        <button class="btn btn-success">
+        <button class="btn btn-success" (click)="salvarAlteracao()">
           <!-- <span class="spinner-border spinner-border-sm mr-1"></span> -->
           Salvar Evento
         </button>
