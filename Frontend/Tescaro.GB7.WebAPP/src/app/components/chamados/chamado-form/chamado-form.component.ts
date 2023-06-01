@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Chamado } from 'src/app/models/Chamado';
 import { ChamadoService } from 'src/app/services/chamado.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chamado-form',
@@ -15,18 +16,23 @@ export class ChamadoFormComponent implements OnInit {
 
   chamado = {} as Chamado;
   chamadoForm!:  FormGroup;
+  router: Router;
+
 
   constructor(private fb: FormBuilder,
     private localeService: BsLocaleService,
     private chamadoService: ChamadoService,
     private spinner: NgxSpinnerService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    router: Router
     )
     {
       this.localeService.use('pt-br');
+      this.router = router;
+
     }
 
-    public salvarAlteracao(): void{
+    public salvar(): void{
       this.spinner.show();
   
         
@@ -44,7 +50,8 @@ export class ChamadoFormComponent implements OnInit {
           () => this.spinner.hide()
         );
 
-        this.router.
+        this.router.navigateByUrl('/chamados/lista');
+        
 
       
     }
