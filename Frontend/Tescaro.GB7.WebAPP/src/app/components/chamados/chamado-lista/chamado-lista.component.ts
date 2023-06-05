@@ -161,8 +161,13 @@ export class ChamadoListaComponent {
           this.modalRef?.hide();
         }
 
+        editarChamado(id: number): void{
+          this.router.navigate([`chamados/editar/${id}`]);  
+        }
+
         detalheChamado(id: number): void{
-          this.router.navigate([`chamados/editar/${id}`]);  }
+          this.router.navigate([`chamados/detalhe/${id}`]);  
+        }
 
         }
 

@@ -39,7 +39,7 @@ export class ChamadoService {
   }
 
   public put(id: number, chamado: Chamado): Observable<Chamado>{
-    return this.http.post<Chamado>(`${this.baseURL}/${id}`, chamado);
+    return this.http.put<Chamado>(`${this.baseURL}/${id}`, chamado);
   }
 
   public delete(id: number): Observable<any>{

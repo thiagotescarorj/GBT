@@ -16,6 +16,6 @@ export interface Chamado {
   cliente: Cliente;
   bancoDadosId: number;
   bancoDados: BancoDados;
-  dNSId: number;
-  dNS: DNS;
+  dnsId: number;
+  dns: DNS;
 }

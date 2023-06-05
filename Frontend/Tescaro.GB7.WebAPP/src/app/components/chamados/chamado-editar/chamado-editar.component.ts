@@ -41,7 +41,7 @@ export class ChamadoEditarComponent implements OnInit {
         this.chamado = {... this.chamadoForm.value};
 
 
-        this.chamadoService.post(this.chamado).subscribe(
+        this.chamadoService.put(this.chamado.id, this.chamado).subscribe(
           () => this.toastr.success("Chamado salvo com sucesso!", "Sucesso"),
           (error: any) => {
             console.log(error);
@@ -86,9 +86,9 @@ export class ChamadoEditarComponent implements OnInit {
           id: new FormControl(''),
           numero: new FormControl('',[Validators.required]),
           dataRecebimento: new FormControl('',[Validators.required]),
-          dns: new FormControl('',[Validators.required]),
-          bancoDados: new FormControl('',[Validators.required]),
-          cliente: new FormControl('',[Validators.required]),
+          dnsId: new FormControl('',[Validators.required]),
+          bancoDadosId: new FormControl('',[Validators.required]),
+          clienteId: new FormControl('',[Validators.required]), 
           dataEnvioHomologacao: new FormControl(''),
           dataPublicacao: new FormControl(''),
           observacao: new FormControl(''),
@@ -105,11 +105,11 @@ export class ChamadoEditarComponent implements OnInit {
       }
       
       get dnsId(){
-        return this.chamadoForm.get('dnsId')
+        return this.chamadoForm.get('dnsId')!
       }
       
       get bancoDadosId(){
-        return this.chamadoForm.get('bancoDadosId')
+        return this.chamadoForm.get('bancoDadosId')!
       }
       
       get dataRecebimento(){
@@ -149,7 +149,7 @@ export class ChamadoEditarComponent implements OnInit {
           adaptivePosition: true,
           dateInputFormat: 'DD/MM/YYYY',
           containerClass: 'theme-orange',
-          showWeekNumbers: false
+          showWeekNumbers: false,
         }
       }
       
