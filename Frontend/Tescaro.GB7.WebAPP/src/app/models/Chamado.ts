@@ -4,14 +4,14 @@ import { DNS } from "./DNS";
 
 export interface Chamado {
   id: number;
-  numero?: string;
+  numero: string;
   isAtivo: boolean;
   dataHoraCadastro: Date;
-  dataRecebimento?: Date;
-  dataEnvioHomologacao?: Date;
-  dataPublicacao?: Date;
-  observacao?: string;
-  scriptText?: string;
+  dataRecebimento: Date;
+  dataEnvioHomologacao: Date;
+  dataPublicacao: Date;
+  observacao: string;
+  scriptText: string;
   clienteId: number;
   cliente: Cliente;
   bancoDadosId: number;

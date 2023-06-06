@@ -1,6 +1,6 @@
 <div class="card rounded shadow-sm" style="margin-bottom: 20px;">
 
-  <form (ngSubmit)="submit()" [formGroup]="chamadoForm" #formDir="ngForm">
+  <form (ngSubmit)="submit()" [formGroup]="chamadoEditarForm" #formDir="ngForm">
     <div class="p-3">
       <div class="row" style="margin-bottom: 10px;">
         <div class="form-group col-md-6">
@@ -41,12 +41,13 @@
           <input type="datetime"
           class="form-control"
           value="{{chamado.dataRecebimento | DateTimeFormat}}"
+          formControlName = "dataRecebimento"
           placeholder=""
           bsDatepicker
           [bsConfig]="bsConfig"
           >
-          <div *ngIf="dataRecebimento?.invalid && formDir.submitted" class="validation-error" >
-            <p *ngIf="dataRecebimento?.errors?.['required']">O campo Data Recebimento é obrigatório</p>
+          <div *ngIf="dataRecebimento && formDir.submitted" class="validation-error" >
+            <p *ngIf="dataRecebimento.errors?.['required']">O campo Data Recebimento é obrigatório</p>
           </div>
         </div>
         <div class="form-group col-md-4">
@@ -54,6 +55,7 @@
           <input type="datetime"
           class="form-control"
           value="{{chamado.dataEnvioHomologacao | DateTimeFormat}}"
+          formControlName = "dataEnvioHomologacao"
           placeholder=""
           bsDatepicker
           [bsConfig]="bsConfig"
@@ -64,6 +66,7 @@
           <input type="datetime"
           class="form-control"
           value="{{chamado.dataPublicacao| DateTimeFormat}}"
+          formControlName = "dataPublicacao"
           placeholder=""
           bsDatepicker
           [bsConfig]="bsConfig"
@@ -73,11 +76,11 @@
       <div class="row" style="margin-bottom: 10px;">
         <div class="form-group col-md-6">
           <label>Observação</label>
-          <input type="text" class="form-control" placeholder="(000) 90000-0000">
+          <input type="text" class="form-control" placeholder="" formControlName="observacao">
         </div>
         <div class="form-group col-md-6">
           <label>Script</label>
-          <input type="text" class="form-control" placeholder="e-mail">
+          <input type="text" class="form-control" placeholder=""  formControlName="scriptText">
         </div>
       </div>
     </div>
