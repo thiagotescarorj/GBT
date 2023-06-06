@@ -10,7 +10,7 @@ import { ChamadoService } from 'src/app/services/chamado.service';
 @Component({
   selector: 'app-chamado-detalhe',
   templateUrl: './chamado-detalhe.component.html',
-  styleUrls: ['./chamado-detalhe.component.scss'],
+  styleUrls: ['./chamado-detalhe.component.scss']
 
 })
 export class ChamadoDetalheComponent {
@@ -43,7 +43,7 @@ export class ChamadoDetalheComponent {
         {
           next: (chamado: Chamado) => {
             this.chamado = {...chamado};
-           
+            
           },
           error: () => {
             this.spinner.hide();
