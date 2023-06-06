@@ -1,8 +1,32 @@
-<p>chamado-detalhe works!</p>
+<div class="card rounded shadow-sm p-3">
+  <table class="table table-striped table-hover">
+    <tbody>
 
-<table>
-<tbody *ngIf="chamado">
-{{chamado.id}}
-</tbody>
-</table>
+      <tr>
+        <td class="titulo">Id:</td>
+        <td>{{chamado.id}}</td>
+        <td class="titulo">Número:</td>
+        <td>{{chamado.numero}}</td>
+      </tr>
 
+      <tr>
+        <td class="titulo">Status:</td>
+        <td>{{chamado.isAtivo ? 'Ativo' : 'Inativo'}}</td>
+        <td class="titulo">Data de Cadastro:</td>
+        <td>{{chamado.dataHoraCadastro | DateTimeFormat}}</td>
+      </tr>
+      <tr>
+        <td class="titulo">Data de Recebimento:</td>
+        <td>{{chamado.dataRecebimento | DateTimeFormat}}</td>
+        <td class="titulo">Data de Homologação:</td>
+        <td>{{chamado.dataEnvioHomologacao | DateTimeFormat }}</td>
+      </tr>
+      <tr>
+        <td class="titulo">Observação</td>
+        <td class>{{chamado.observacao}}</td>
+        <td class="titulo">Script</td>
+        <td class>{{chamado.scriptText}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
