@@ -14,9 +14,9 @@
         <div class="form-group col-md-6">
           <label>Cliente</label>
           <input type="text" class="form-control"
-          formControlName="cliente" placeholder="">
-          <div *ngIf="cliente.invalid && formDir.submitted" class="validation-error" >
-            <p *ngIf="cliente.errors?.['required']">O campo Cliente é obrigatório</p>
+          formControlName="clienteId" placeholder="">
+          <div *ngIf="clienteId.invalid && formDir.submitted" class="validation-error" >
+            <p *ngIf="clienteId.errors?.['required']">O campo Cliente é obrigatório</p>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
         <button class="btn btn-outline-danger me-auto border" routerLink="/bancoDados/lista">
           Cancelar Alteração
         </button>
-        <button class="btn btn-success">
+        <button class="btn btn-success" (click)="salvar()">
           <!-- <span class="spinner-border spinner-border-sm mr-1"></span> -->
           Salvar Evento
         </button>

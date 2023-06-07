@@ -32,6 +32,8 @@ namespace Tescaro.GBT.Appplication.Models
             {
                 var chamado = _mapper.Map<Chamado>(model);
 
+                chamado.DataHoraCadastro = DateTime.Now;
+
                 _GBTRepository.Adicionar<Chamado>(chamado);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())

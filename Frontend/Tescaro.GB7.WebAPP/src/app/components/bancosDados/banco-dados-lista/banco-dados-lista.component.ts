@@ -60,84 +60,88 @@ export class BancoDadosListaComponent {
         const isAtivoStr = bancoDados.isAtivo ? "Ativo" : "Inativo";
         const dataHoraCadastroStr = bancoDados.dataHoraCadastro == null ? "" : bancoDados.dataHoraCadastro;
         return bancoDados.nome.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || isAtivoStr.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-          || dataHoraCadastroStr.indexOf(filtrarPor) !== -1;
+        || isAtivoStr.toLocaleLowerCase().indexOf(filtrarPor) !== -1
+        || dataHoraCadastroStr.indexOf(filtrarPor) !== -1;
       }
-    );
-  }
-
-  constructor(
-    private bancoDadosService: BancoDadosService,
-    private modalService: BsModalService,
-    private toastr: ToastrService,
-    private spinner: NgxSpinnerService,
-    private router: Router
-  ){}
-
-  public ngOnInit(): void{
-    this.spinner.show();
-    this.getBancoDadosList();
-  }
-
-
-
-  public getBancoDadosList(): void{
-    const Observer = {
-      next:(_bancoDados: BancoDados[]) => {
-        this.BancoDadosList = _bancoDados;
-        this.BancoDadosListFiltrados = this.BancoDadosList;
-      },
-      error: (error: any) => {
-        this.spinner.hide();
-        this.toastr.error('Erro ao carregar os BancoDadosList', 'Erro!')
-      },
-      complete: () => this.spinner.hide()
-
+      );
     }
 
-    this.bancoDadosService.getTodosBancosDados().subscribe(Observer);
+    constructor(
+      private bancoDadosService: BancoDadosService,
+      private modalService: BsModalService,
+      private toastr: ToastrService,
+      private spinner: NgxSpinnerService,
+      private router: Router
+      ){}
 
-
-
-  }
-
-
-  // Modal
-
-  message?: string;
-
-  openModal(event: any, template: TemplateRef<any>, bancoDadosName: string, bancoDadosId: string) {
-    event.stopPropagation();
-    this.bancoDadosName = bancoDadosName;
-    this.bancoDadosId = bancoDadosId;
-    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
-  }
-
-  confirm(): void {
-    this.modalRef?.hide();
-    this.spinner.show();
-    this.bancoDadosService.delete(parseFloat(this.bancoDadosId)).subscribe(
-      (result: any) => {
-        console.log(result);
-        this.toastr.success(`O Banco de Dados ${this.bancoDadosName} foi deletado com sucesso.`);
-        this.spinner.hide();
+      public ngOnInit(): void{
+        this.spinner.show();
         this.getBancoDadosList();
-      },
-      (error: any) => {
-        console.error(error);
-        this.toastr.error(`Erro ao tentar deletar o Banco de Dados ${this.bancoDadosName}`);
-      },
-      () => this.spinner.hide()
-    );
-  }
-
-  decline(): void {
-    this.modalRef?.hide();
-  }
-
-  detalheBancoDados(id: number): void{
-    this.router.navigate([`bancoDados/detalhe/${id}`]);
-  }
+      }
 
 
-}
+
+      public getBancoDadosList(): void{
+        const Observer = {
+          next:(_bancoDados: BancoDados[]) => {
+            this.BancoDadosList = _bancoDados;
+            this.BancoDadosListFiltrados = this.BancoDadosList;
+          },
+          error: (error: any) => {
+            this.spinner.hide();
+            this.toastr.error('Erro ao carregar os BancoDadosList', 'Erro!')
+          },
+          complete: () => this.spinner.hide()
+
+        }
+
+        this.bancoDadosService.getTodosBancosDados().subscribe(Observer);
+
+
+
+      }
+
+
+      // Modal
+
+      message?: string;
+
+      openModal(event: any, template: TemplateRef<any>, bancoDadosName: string, bancoDadosId: string) {
+        event.stopPropagation();
+        this.bancoDadosName = bancoDadosName;
+        this.bancoDadosId = bancoDadosId;
+        this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+      }
+
+      confirm(): void {
+        this.modalRef?.hide();
+        this.spinner.show();
+        this.bancoDadosService.delete(parseFloat(this.bancoDadosId)).subscribe(
+          (result: any) => {
+            console.log(result);
+            this.toastr.success(`O Banco de Dados ${this.bancoDadosName} foi deletado com sucesso.`);
+            this.spinner.hide();
+            this.getBancoDadosList();
+          },
+          (error: any) => {
+            console.error(error);
+            this.toastr.error(`Erro ao tentar deletar o Banco de Dados ${this.bancoDadosName}`);
+          },
+          () => this.spinner.hide()
+          );
+        }
+
+        decline(): void {
+          this.modalRef?.hide();
+        }
+
+        editarBancoDados(id: number): void{
+          this.router.navigate([`bancoDados/editar/${id}`]);
+        }
+
+        detalheBancoDados(id: number): void{
+          this.router.navigate([`bancoDados/detalhe/${id}`]);
+        }
+
+
+      }

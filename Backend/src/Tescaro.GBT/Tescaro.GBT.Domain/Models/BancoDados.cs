@@ -21,6 +21,5 @@ namespace Tescaro.GBT.Domain.Models
 
         
         public long ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
     }
 }

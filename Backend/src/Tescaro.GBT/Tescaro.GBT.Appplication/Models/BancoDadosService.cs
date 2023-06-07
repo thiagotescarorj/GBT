@@ -30,6 +30,10 @@ namespace Tescaro.GBT.Appplication.Models
             try
             {
                 var bancoDados = _mapper.Map<BancoDados>(model);
+
+                bancoDados.DataHoraCadastro = DateTime.Now;
+                bancoDados.IsAtivo = true;
+
                 _GBTRepository.Adicionar<BancoDados>(bancoDados);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
