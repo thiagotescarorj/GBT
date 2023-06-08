@@ -32,7 +32,7 @@
 
     </thead>
     <tbody *ngIf="Clientes">
-      <tr *ngFor="let cliente of ClientesFiltrados" (click)="detalheCliente(cliente.id)" style="cursor:pointer">
+      <tr *ngFor="let cliente of ClientesFiltrados" (click)="editarCliente(cliente.id)" style="cursor:pointer">
         <td>{{cliente.id}}</td>
         <td>{{cliente.nome}}</td>
         <td>{{cliente.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
@@ -41,7 +41,7 @@
           <!-- <button type="button" class="btn btn-primary btn-sm me-2 " title="Detalhes" (click)="detalheCliente(cliente.id)">
             <i class="fas fa-list"></i>
           </button> -->
-          <button type="button" class="btn btn-primary btn-sm me-2 " title="Editar">
+          <button type="button" class="btn btn-primary btn-sm me-2 " title="Editar" (click)="editarCliente(cliente.id)">
             <i class="fas fa-edit"></i>
           </button>
           <button type="button" class="btn btn-danger btn-sm" title="Excluir" (click)="openModal($event,template,cliente.nome, cliente.id)">

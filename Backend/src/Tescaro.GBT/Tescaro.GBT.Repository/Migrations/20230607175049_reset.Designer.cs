@@ -12,8 +12,8 @@ using Tescaro.GBT.Repository;
 namespace Tescaro.GBT.Repository.Migrations
 {
     [DbContext(typeof(GBTContext))]
-    [Migration("20230414040540_ok")]
-    partial class ok
+    [Migration("20230607175049_reset")]
+    partial class reset
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -120,8 +120,7 @@ namespace Tescaro.GBT.Repository.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -162,7 +161,7 @@ namespace Tescaro.GBT.Repository.Migrations
             modelBuilder.Entity("Tescaro.GBT.Domain.Models.BancoDados", b =>
                 {
                     b.HasOne("Tescaro.GBT.Domain.Models.Cliente", "Cliente")
-                        .WithMany("BancosDados")
+                        .WithMany()
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -179,7 +178,7 @@ namespace Tescaro.GBT.Repository.Migrations
                         .IsRequired();
 
                     b.HasOne("Tescaro.GBT.Domain.Models.Cliente", "Cliente")
-                        .WithMany("Chamados")
+                        .WithMany()
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -200,21 +199,12 @@ namespace Tescaro.GBT.Repository.Migrations
             modelBuilder.Entity("Tescaro.GBT.Domain.Models.DNS", b =>
                 {
                     b.HasOne("Tescaro.GBT.Domain.Models.Cliente", "Cliente")
-                        .WithMany("DNSs")
+                        .WithMany()
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("Tescaro.GBT.Domain.Models.Cliente", b =>
-                {
-                    b.Navigation("BancosDados");
-
-                    b.Navigation("Chamados");
-
-                    b.Navigation("DNSs");
                 });
 #pragma warning restore 612, 618
         }

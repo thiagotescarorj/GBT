@@ -17,6 +17,7 @@ import { defineLocale } from 'ngx-bootstrap/chronos';
 import { ptBrLocale } from 'ngx-bootstrap/locale';
 
 
+
 import { AppComponent } from './app.component';
 import { ChamadosComponent } from './components/chamados/chamados.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
@@ -54,6 +55,7 @@ import { BancoDadosListaComponent } from './components/bancosDados/banco-dados-l
 import { BancoDadosEditarComponent } from './components/bancosDados/banco-dados-editar/banco-dados-editar.component';
 import { BancoDadosDetalheComponent } from './components/bancosDados/banco-dados-detalhe/banco-dados-detalhe.component';
 import { BancoDadosFormComponent } from './components/bancosDados/banco-dados-form/banco-dados-form.component';
+
 
 defineLocale('pt-br', ptBrLocale);
 
@@ -102,7 +104,7 @@ defineLocale('pt-br', ptBrLocale);
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     ToastrModule.forRoot({
-      timeOut: 5000,
+      timeOut: 2000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
       progressBar: true
@@ -110,7 +112,7 @@ defineLocale('pt-br', ptBrLocale);
     NgxSpinnerModule,
     BsDatepickerModule.forRoot(),
 
-
+    
   ],
 
   providers: [ChamadoService, ClienteService, DNSService, BancoDadosService],

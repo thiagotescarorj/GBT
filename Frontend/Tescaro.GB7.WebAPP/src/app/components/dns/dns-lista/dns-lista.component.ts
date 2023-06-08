@@ -134,6 +134,10 @@ export class DnsListaComponent {
     this.modalRef?.hide();
   }
 
+  editarDNS(id: number): void{
+    this.router.navigate([`dns/editar/${id}`]);
+  }
+
   detalheDNS(id: number): void{
     this.router.navigate([`dns/detalhe/${id}`]);
   }

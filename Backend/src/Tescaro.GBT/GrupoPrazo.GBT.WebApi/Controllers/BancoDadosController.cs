@@ -47,7 +47,8 @@ namespace Tescaro.GBT.API.Controllers
             
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("GetById")]
         public async Task<IActionResult> GetById(long id)
         {
             try
@@ -70,7 +71,8 @@ namespace Tescaro.GBT.API.Controllers
             }
         }
 
-        [HttpGet("{nome}")]
+        [HttpGet]
+        [Route("GetByNome")]
         public async Task<IActionResult> GetByNome(string nome)
         {
             try
@@ -93,7 +95,8 @@ namespace Tescaro.GBT.API.Controllers
             }
         }
 
-        [HttpGet("{clienteId}")]
+        [HttpGet]
+        [Route("GetByClienteId")]
         public async Task<IActionResult> GetByCliente(long clienteId)
         {
             try
@@ -158,7 +161,7 @@ namespace Tescaro.GBT.API.Controllers
                 }
                 else
                 {
-                    await _bancoDadosService.AtualizarBancoDados(id, bancoDados);
+                    await _bancoDadosService.AtualizarBancoDados(id, model);
 
                     return Ok(bancoDados);
                 }
@@ -178,7 +181,7 @@ namespace Tescaro.GBT.API.Controllers
             {
                 if (await _bancoDadosService.ExcluirBancoDados(id))
                 {
-                    return Ok($"Banco de Dados ID:{id} deletado");
+                    return Ok(new { message = $"Banco de Dados ID:{id} deletado" });
                 }
                 else
                 {

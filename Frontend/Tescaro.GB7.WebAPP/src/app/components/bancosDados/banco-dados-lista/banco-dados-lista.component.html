@@ -32,15 +32,15 @@
 
     </thead>
     <tbody *ngIf="BancoDadosList">
-      <tr *ngFor="let bancoDados of BancoDadosListFiltrados" (click)="detalheBancoDados(bancoDados.id)" style="cursor:pointer">
+      <tr *ngFor="let bancoDados of BancoDadosListFiltrados" (click)="editarBancoDados(bancoDados.id)" style="cursor:pointer">
         <td>{{bancoDados.id}}</td>
         <td>{{bancoDados.nome}}</td>
         <td>{{bancoDados.isAtivo ? 'Ativo' : 'Inatvo'}}</td>
         <td>{{bancoDados.dataHoraCadastro | DateTimeFormat}}</td>
         <td class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary btn-sm me-2 " title="Detalhes" (click)="detalheBancoDados(bancoDados.id)">
+          <!-- <button type="button" class="btn btn-primary btn-sm me-2 " title="Detalhes" (click)="detalheBancoDados(bancoDados.id)">
             <i class="fas fa-list"></i>
-          </button>
+          </button> -->
           <button type="button" class="btn btn-primary btn-sm me-2 " title="Editar" (click)="editarBancoDados(bancoDados.id)">
             <i class="fas fa-edit"></i>
           </button>

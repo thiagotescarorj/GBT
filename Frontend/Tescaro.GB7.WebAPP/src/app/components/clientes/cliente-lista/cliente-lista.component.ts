@@ -134,9 +134,14 @@ export class ClienteListaComponent {
     this.modalRef?.hide();
   }
 
+  editarCliente(id: number): void{
+    this.router.navigate([`clientes/editar/${id}`]);
+  }
+
   detalheCliente(id: number): void{
     this.router.navigate([`clientes/detalhe/${id}`]);
   }
+
 
 
 }

@@ -23,13 +23,13 @@ namespace Tescaro.GBT.Domain.Models
 
         
         public long ClienteId { get; set; }
-        //public Cliente? Cliente { get; set; }
+        public Cliente? Cliente { get; set; }
 
         public long BancoDadosId { get; set; }
-        //public BancoDados? BancoDados { get; set; }
+        public BancoDados? BancoDados { get; set; }
 
         public long DNSId { get; set; }
-        //public DNS? DNS { get; set; }
+        public DNS? DNS { get; set; }
         
     }
 }

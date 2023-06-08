@@ -56,9 +56,9 @@ namespace Tescaro.GBT.Appplication.Models
 
                 model.Id = cliente.Id;
 
-                _mapper.Map(model, cliente);
+                var resultado = _mapper.Map(model, cliente);
 
-                _GBTRepository.Atualizar(model);
+                _GBTRepository.Atualizar(resultado);
 
                 if (await _GBTRepository.SalvarAlteracoesAsync())
                 {

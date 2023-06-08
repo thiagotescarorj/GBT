@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Tescaro.GBT.Repository.Migrations
 {
-    public partial class ok : Migration
+    public partial class reset : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace Tescaro.GBT.Repository.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsAtivo = table.Column<bool>(type: "bit", nullable: false),
                     DataHoraCadastro = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -95,7 +95,7 @@ namespace Tescaro.GBT.Repository.Migrations
                         column: x => x.BancoDadosId,
                         principalTable: "BancoDados",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Chamado_Cliente_ClienteId",
                         column: x => x.ClienteId,

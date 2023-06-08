@@ -6,7 +6,7 @@ import { BancoDados } from '../models/BancoDados';
 @Injectable()
 export class BancoDadosService {
 
-  baseURL = 'https://localhost:7276/api/BancoDados/';
+  baseURL = 'https://localhost:7276/api/BancoDados';
 
   constructor(private http: HttpClient) { }
 
@@ -15,16 +15,16 @@ export class BancoDadosService {
   }
 
   getBancoDadosById(id: number): Observable<BancoDados>{
-    return this.http.get<BancoDados>(`${this.baseURL}/${id}`);
+    return this.http.get<BancoDados>(`${this.baseURL}/GetById?id=${id}`);
   }
 
   getBancoDadossByNumero(nome: string): Observable<BancoDados[]>{
-    return this.http.get<BancoDados[]>(`${this.baseURL}/${nome}`)
+    return this.http.get<BancoDados[]>(`${this.baseURL}/GetByNome?nome=${nome}`)
   }
 
 
   getBancoDadossByCliente(clienteId: number): Observable<BancoDados[]>{
-    return this.http.get<BancoDados[]>(`${this.baseURL}/${clienteId}`)
+    return this.http.get<BancoDados[]>(`${this.baseURL}/GetByClienteId?clienteId=${clienteId}`)
   }
 
   public post(bancoDados: BancoDados): Observable<BancoDados>{
@@ -32,7 +32,7 @@ export class BancoDadosService {
   }
 
   public put(id: number, bancoDados: BancoDados): Observable<BancoDados>{
-    return this.http.post<BancoDados>(`${this.baseURL}/${id}`, bancoDados);
+    return this.http.put<BancoDados>(`${this.baseURL}/${id}`, bancoDados);
   }
 
   public delete(id: number): Observable<any>{

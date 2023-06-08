@@ -40,7 +40,8 @@ export class ChamadoFormComponent implements OnInit {
       this.chamado.id = 0;
       
       this.chamadoService.post(this.chamado).subscribe(
-        () => this.toastr.success("Chamado salvo com sucesso!", "Sucesso"),
+        () => this.toastr.success("Chamado salvo com sucesso!", "Sucesso")
+                         .onHidden.subscribe(() => {setTimeout(window.location.href ='/chamados/lista', 2000)}),
         (error: any) => {
           console.log(error);
           this.spinner.hide();
@@ -48,10 +49,6 @@ export class ChamadoFormComponent implements OnInit {
         },
         () => this.spinner.hide()
         );
-        
-        setTimeout(window.location.href ='/chamados/lista', 2000);   
-        
-        
         
       }
       

@@ -50,7 +50,6 @@ export class BancoDadosFormComponent implements OnInit {
         () => this.spinner.hide()
         );
 
-        //setTimeout(window.location.href ='/bancoDados/lista', 2000);
 
       }
 

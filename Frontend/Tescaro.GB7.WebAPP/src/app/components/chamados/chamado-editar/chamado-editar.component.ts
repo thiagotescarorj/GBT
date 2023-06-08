@@ -42,7 +42,8 @@ export class ChamadoEditarComponent implements OnInit {
       
       
       this.chamadoService.put(this.chamado.id, this.chamado).subscribe(
-        () => this.toastr.success("Chamado salvo com sucesso!", "Sucesso"),
+        () => this.toastr.success("Chamado salvo com sucesso!", "Sucesso")
+                         .onHidden.subscribe(() => {setTimeout(window.location.href ='/chamados/lista', 2000)}),
         (error: any) => {
           console.log(error);
           this.spinner.hide();
@@ -52,7 +53,7 @@ export class ChamadoEditarComponent implements OnInit {
         );
         
         
-        setTimeout(window.location.href ='/chamados/lista', 2000);       
+        
         
         
       }

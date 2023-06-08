@@ -12,22 +12,30 @@
                 <td class="conteudo">{{chamado.numero}}</td>
             </tr>
             <tr>
-                <td class="titulo">Status:</td>
-                <td class="conteudo">{{chamado.isAtivo ? 'Ativo' : 'Inativo'}}</td>
-                <td class="titulo">Data de Cadastro:</td>
-                <td class="conteudo">{{chamado.dataHoraCadastro | DateTimeFormat}}</td>
+                <td class="titulo">Cliente:</td>
+                <td class="conteudo">{{chamado.clienteId}}</td>
+                <td class="titulo">Banco de Dados:</td>
+                <td class="conteudo">{{chamado.bancoDadosId}}</td>
             </tr>
             <tr>
+                <td class="titulo">Ambiente de Homologação:</td>
+                <td class="conteudo">{{chamado.dnsId}}</td>
+                <td class="titulo">Status:</td>
+                <td class="conteudo">{{chamado.isAtivo ? 'Ativo' : 'Inativo'}}</td>
+            </tr>
+            <tr>               
+                <td class="titulo">Data de Cadastro:</td>
+                <td class="conteudo">{{chamado.dataHoraCadastro | DateTimeFormat}}</td>
                 <td class="titulo">Data de Recebimento:</td>
                 <td class="conteudo">{{chamado.dataRecebimento | DateTimeFormat}}</td>
+            </tr>
+            <tr>                
                 <td class="titulo">Data de Publicação:</td>
                 <td class="conteudo">{{chamado.dataPublicacao | DateTimeFormat}}</td>
             </tr>
             <tr>
                 <td class="titulo">Observação:</td>
-                <td class="conteudo">{{chamado.observacao}}</td>
-                <td class="titulo">Script:</td>
-                <td class="conteudo">{{chamado.scriptText}}</td>
+                <td class="conteudo">{{chamado.observacao}}</td>                
             </tr>
 
         </tbody>
