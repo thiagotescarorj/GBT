@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Collections;
+using Tescaro.GBT.Domain.Identity;
 
 namespace Tescaro.GBT.Domain.Models
 {
@@ -22,5 +23,8 @@ namespace Tescaro.GBT.Domain.Models
         
         public long ClienteId { get; set; }
         public Cliente Cliente { get; set; }
+
+        public long UserId { get; set; }
+        public User User { get; set; }
     }
 }

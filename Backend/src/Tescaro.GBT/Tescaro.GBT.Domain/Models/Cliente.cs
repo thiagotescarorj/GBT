@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Tescaro.GBT.Domain.Identity;
 
 namespace Tescaro.GBT.Domain.Models
 {
@@ -19,6 +20,10 @@ namespace Tescaro.GBT.Domain.Models
         //public ICollection<Chamado>? Chamados { get; set;}
         //public ICollection<DNS>? DNSs { get; set;}
         //public ICollection<BancoDados>? BancosDados { get; set;}
+
+
+        public long UserId { get; set; }
+        public User User { get; set; }
 
     }
 }

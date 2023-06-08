@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Tescaro.GBT.Domain.Identity;
 
 namespace Tescaro.GBT.Domain.Models
 {
@@ -30,6 +31,9 @@ namespace Tescaro.GBT.Domain.Models
 
         public long DNSId { get; set; }
         public DNS? DNS { get; set; }
-        
+
+        public long UserId { get; set; }
+        public User User { get; set; }
+
     }
 }

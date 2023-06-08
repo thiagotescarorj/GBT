@@ -1,4 +1,6 @@
-﻿namespace Tescaro.GBT.Domain.Models
+﻿using Tescaro.GBT.Domain.Identity;
+
+namespace Tescaro.GBT.Domain.Models
 {
     public class DNS
     {
@@ -15,7 +17,10 @@
 
         public long ClienteId { get; set; }
         public Cliente Cliente { get; set; }
-        
+
+        public long UserId { get; set; }
+        public User User { get; set; }
+
 
     }
 }
