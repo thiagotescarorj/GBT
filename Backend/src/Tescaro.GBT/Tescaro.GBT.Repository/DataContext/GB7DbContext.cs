@@ -18,6 +18,9 @@ namespace Tescaro.GBT.Repository
         public DbSet<BancoDados> BancoDados { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<DNS> DNS { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+
+
         //public DbSet<LogCrud> LogCrud { get; set; }
         //public DbSet<ProcedimentosComuns> ProcedimentosComuns { get; set; }
         //public DbSet<Backlog> Backlog { get; set; }

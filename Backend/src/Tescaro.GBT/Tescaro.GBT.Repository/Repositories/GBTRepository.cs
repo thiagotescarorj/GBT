@@ -37,9 +37,6 @@ namespace Tescaro.GBT.Repository.Repositories
             _context.RemoveRange(entityList);
         }
 
-
-
-
         public async Task<bool> SalvarAlteracoesAsync()
         {
             return (await _context.SaveChangesAsync()) > 0;
