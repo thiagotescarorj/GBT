@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Tescaro.GBT.Appplication.Interfaces;
-using Tescaro.GBT.Appplication.Models;
+using Tescaro.GBT.Appplication.Services;
 using Tescaro.GBT.Repository;
 using Tescaro.GBT.Repository.Interfaces;
 using Tescaro.GBT.Repository.Repositories;

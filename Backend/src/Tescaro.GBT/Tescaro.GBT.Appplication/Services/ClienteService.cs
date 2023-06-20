@@ -10,7 +10,7 @@ using Tescaro.GBT.Domain.Models;
 using Tescaro.GBT.Repository.Interfaces;
 using Tescaro.GBT.Repository.Repositories;
 
-namespace Tescaro.GBT.Appplication.Models
+namespace Tescaro.GBT.Appplication.Services
 {
     public class ClienteService : IClienteService
     {

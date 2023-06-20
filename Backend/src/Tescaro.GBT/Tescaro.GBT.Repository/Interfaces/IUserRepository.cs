@@ -8,6 +8,7 @@ namespace Tescaro.GBT.Repository.Interfaces
         #region User
         Task<List<User>> GetTodosUsers();
         Task<User> GetUserById(long userId);
+        Task<User> GetUserByEmailAsync(string email);
 
         #endregion
 

@@ -9,7 +9,7 @@ using Tescaro.GBT.Appplication.Interfaces;
 using Tescaro.GBT.Domain.Models;
 using Tescaro.GBT.Repository.Interfaces;
 
-namespace Tescaro.GBT.Appplication.Models
+namespace Tescaro.GBT.Appplication.Services
 {
     public class ChamadoService : IChamadoService
     {

@@ -32,5 +32,11 @@ namespace Tescaro.GBT.Repository.Repositories
             return await query.ToListAsync();
         }
 
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            IQueryable<User> query = _context.Users.Where(x => x.Email.ToLower() == email.ToLower()).AsNoTracking();
+            return await query.FirstOrDefaultAsync();
+        }
+
     }
 }
