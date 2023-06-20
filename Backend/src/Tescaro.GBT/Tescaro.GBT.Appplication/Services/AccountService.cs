@@ -85,7 +85,25 @@ namespace Tescaro.GBT.Appplication.Services
         {
             try
             {
+                var user = await _userRepository.GetUserById(userUpdateDTO.Id);
+                if (user == null) return null;
+
+                _mapper.Map(userUpdateDTO, user);
+
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var result = await _userManager.ResetPasswordAsync(user, token, userUpdateDTO.Password);
+
+                _userRepository.Atualizar<User>(user);
+
+                if (await _userRepository.SalvarAlteracoesAsync())
+                {
+                    var userRetorno = await _userRepository.GetUserById(user.Id);
+
+                    return _mapper.Map<UserUpdateDTO>(userRetorno);
+                }
+
                 return null;
+
             }
             catch (Exception ex)
             {

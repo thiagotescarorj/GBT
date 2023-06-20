@@ -14,5 +14,6 @@ namespace Tescaro.GBT.Appplication.DTOs
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Perfil { get; set; }
+        public string Token { get; set; }
     }
 }
