@@ -114,6 +114,23 @@ namespace Tescaro.GBT.Appplication.Services
             }
         }
 
+        public async Task<List<ChamadoDTO>> GetTodosChamadosFromUser(long userId)
+        {
+            try
+            {
+                var chamados = _chamadoRepository.GetTodosChamadosFromUser(userId);
+                if (chamados == null) return null;
+
+                var resultado = _mapper.Map<List<ChamadoDTO>>(chamados);
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<ChamadoDTO> GetChamadoById(long chamadoId)
         {
             try

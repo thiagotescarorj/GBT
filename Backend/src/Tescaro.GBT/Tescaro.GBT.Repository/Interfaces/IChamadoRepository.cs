@@ -7,6 +7,7 @@ namespace Tescaro.GBT.Repository.Interfaces
 
         #region Chamado
         List<Chamado> GetTodosChamados();
+        List<Chamado> GetTodosChamadosFromUser(long userId);
         Task<Chamado> GetChamadoById(long chamadoId);
         Task<List<Chamado>> GetTodosChamadosByNumero(string numero);
         Task<List<Chamado>> GetTodosChamadosByCliente(long clienteId);

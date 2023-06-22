@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Tescaro.GBT.API.DTOs;
+using Tescaro.GBT.API.Extentions;
 using Tescaro.GBT.Appplication.Interfaces;
 
 namespace Tescaro.GBT.API.Controllers
@@ -50,6 +51,32 @@ namespace Tescaro.GBT.API.Controllers
             }
             
         }
+
+
+        [HttpGet("chamado/{userId}")]
+        public async Task<ActionResult<IEnumerable<ChamadoDTO>>> GetAllFromUserId()
+        {
+            try
+            {
+                var chamados = await _chamadoService.GetTodosChamadosFromUser(User.GetUserId());
+                if (chamados == null)
+                {
+                    return NotFound("Nenhum Chamado encontrado.");
+                }
+                else
+                {
+                    return Ok(chamados);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                                       $"Erro ao tentar recuperar Chamados. Erro: {ex.Message}");
+            }
+
+        }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(long id)
@@ -186,6 +213,7 @@ namespace Tescaro.GBT.API.Controllers
         {
             try
             {
+                chamado.UserId = User.GetUserId();
                 var Chamado = await _chamadoService.AdicionarChamado(chamado);
                 if (Chamado == null)
                 {
@@ -209,7 +237,7 @@ namespace Tescaro.GBT.API.Controllers
         {
             try
             {
-
+                model.UserId = User.GetUserId();
                 var chamado = await _chamadoService.GetChamadoById(id);
                 if (chamado == null)
                 {

@@ -40,5 +40,6 @@ namespace Tescaro.GBT.API.DTOs
 
         [Required(ErrorMessage = "O campo DNS é obrigatório")]
         public long DNSId { get; set; }
+        public long UserId { get; set; }
     }
 }

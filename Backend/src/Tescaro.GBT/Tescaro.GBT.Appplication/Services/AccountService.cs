@@ -26,12 +26,12 @@ namespace Tescaro.GBT.Appplication.Services
         }
 
 
-        public async Task<SignInResult> CheckUserPasswordAsync(UserUpdateDTO userUpdateDTO, string passwoord)
+        public async Task<SignInResult> CheckUserPasswordAsync(UserUpdateDTO userUpdateDTO, string password)
         {
             try
             {
                 var user = await _userManager.Users.SingleOrDefaultAsync(x => x.Email.ToLower() == userUpdateDTO.Email.ToLower());
-                return await _signInManager.CheckPasswordSignInAsync(user, passwoord, false);
+                return await _signInManager.CheckPasswordSignInAsync(user, password, false);
 
             }
             catch (Exception ex)

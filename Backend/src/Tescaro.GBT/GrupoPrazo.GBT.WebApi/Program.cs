@@ -51,6 +51,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["GBTKey"])),
             ValidateIssuerSigningKey = false,
             ValidateAudience = false,
+            
         };
     });
 
@@ -76,6 +77,7 @@ builder.Services.AddScoped<IBancoDadosService, BancoDadosService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<IDNSService, DNSService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 var app = builder.Build();

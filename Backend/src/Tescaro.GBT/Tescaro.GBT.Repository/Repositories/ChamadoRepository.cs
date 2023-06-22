@@ -62,6 +62,19 @@ namespace Tescaro.GBT.Repository.Repositories
             return query.ToList();
         }
 
+        public List<Chamado> GetTodosChamadosFromUser(long userId)
+        {
+            IQueryable<Chamado> query = _context.Chamado.Where(x => x.Id == userId).AsQueryable();
+            //.Include(x => x.BancoDadosId)
+            //.Include(x => x.DNSId)
+            //.Include(x => x.ClienteId).AsQueryable();
+            if (query == null)
+            {
+                return null;
+            }
+            return query.ToList();
+        }
+
         public async Task<List<Chamado>> GetTodosAtivosChamados()
         {
             IQueryable<Chamado> query = _context.Chamado;

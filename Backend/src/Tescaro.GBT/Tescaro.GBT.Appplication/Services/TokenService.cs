@@ -32,32 +32,38 @@ namespace Tescaro.GBT.Appplication.Services
         }
 
 
+
         public async Task<string> CreateToken(UserUpdateDTO userUpdateDTO)
         {
             var user = _mapper.Map<User>(userUpdateDTO);
+            var roles = _userManager.GetRolesAsync(user);
 
-            var claims = new List<Claim>
+  
+            var secretKey = "gbt-gda-secret-key this is my custom Secret key for authentication";
+            var keyBytes = Encoding.UTF8.GetBytes(secretKey);
+            var signingKey = new SymmetricSecurityKey(keyBytes);
+
+  
+            var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName),
-            };
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), 
+            new Claim(ClaimTypes.Email, user.Email),
+        };
 
-            var roles = await _userManager.GetRolesAsync(user);
-
-            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
-
-            var creds = new SigningCredentials(_Key, SecurityAlgorithms.HmacSha512Signature);
-
-            var tokenDescription = new SecurityTokenDescriptor
+            // Crie o token
+            var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = creds
+                Expires = DateTime.UtcNow.AddDays(1),
+                SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha512Signature)
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var token = tokenHandler.CreateToken(tokenDescription);
-            return tokenHandler.WriteToken(token);
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            // Retorne o token como uma string
+            return await Task.FromResult(tokenHandler.WriteToken(token));
         }
+
     }
 }
