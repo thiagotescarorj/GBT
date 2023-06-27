@@ -22,3 +22,15 @@ C:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tesc
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\refint\Tescaro.GBT.Domain.dll
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.pdb
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\ref\Tescaro.GBT.Domain.dll
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\bin\Debug\net6.0\Tescaro.GBT.Domain.deps.json
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\bin\Debug\net6.0\Tescaro.GBT.Domain.dll
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\bin\Debug\net6.0\Tescaro.GBT.Domain.pdb
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.csproj.AssemblyReference.cache
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.AssemblyInfoInputs.cache
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.AssemblyInfo.cs
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.csproj.CoreCompileInputs.cache
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.dll
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\refint\Tescaro.GBT.Domain.dll
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\Tescaro.GBT.Domain.pdb
+D:\Projetos\GBT\Backend\src\Tescaro.GBT\Tescaro.GBT.Domain\obj\Debug\net6.0\ref\Tescaro.GBT.Domain.dll
