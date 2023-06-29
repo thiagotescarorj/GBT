@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tescaro.GBT.Repository;
 
@@ -11,9 +12,10 @@ using Tescaro.GBT.Repository;
 namespace Tescaro.GBT.Repository.Migrations
 {
     [DbContext(typeof(GBTContext))]
-    partial class GBTContextModelSnapshot : ModelSnapshot
+    [Migration("20230628225041_outUser")]
+    partial class outUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -172,10 +174,6 @@ namespace Tescaro.GBT.Repository.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NomeCompleto")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

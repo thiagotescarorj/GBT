@@ -8,7 +8,7 @@ namespace Tescaro.GBT.Appplication.Interfaces
         Task<bool> UserExists(string username);
         Task<UserUpdateDTO> GetUserByEmailAsync(string email);
         Task<SignInResult> CheckUserPasswordAsync(UserUpdateDTO userUpdateDTO, string passwoord);
-        Task<UserDTO> CreateAccountAsync(UserDTO userDTO);
+        Task<UserUpdateDTO> CreateAccountAsync(UserDTO userDTO);
         Task<UserUpdateDTO> UpdateAccount(UserUpdateDTO userUpdateDTO); 
     }
 }

@@ -41,18 +41,19 @@ namespace Tescaro.GBT.Appplication.Services
             }
         }
 
-        public async Task<UserDTO> CreateAccountAsync(UserDTO userDTO)
+        public async Task<UserUpdateDTO> CreateAccountAsync(UserDTO userDTO)
         {
             try
             {
                 var user = _mapper.Map<User>(userDTO);
                 user.UserName = userDTO.Email;
+                user.NomeCompleto = userDTO.Nome + " " + userDTO.Sobrenome;
 
                 var result = await _userManager.CreateAsync(user, userDTO.Password);
 
                 if (result.Succeeded)
                 {
-                    return _mapper.Map<UserDTO>(user);
+                    return _mapper.Map<UserUpdateDTO>(user);
                 }
 
                 return null;
@@ -87,6 +88,11 @@ namespace Tescaro.GBT.Appplication.Services
             {
                 var user = await _userRepository.GetUserById(userUpdateDTO.Id);
                 if (user == null) return null;
+
+                //if (userUpdateDTO.Nome.ToLower() != user.Nome.ToLower() || userUpdateDTO.Sobrenome.ToLower() != user.Sobrenome.ToLower()) 
+                //{
+                //    user.NomeCompleto = userUpdateDTO.Nome + " " + userUpdateDTO.Sobrenome;
+                //}
 
                 _mapper.Map(userUpdateDTO, user);
 

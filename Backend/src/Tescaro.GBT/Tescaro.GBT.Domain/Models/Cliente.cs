@@ -22,8 +22,6 @@ namespace Tescaro.GBT.Domain.Models
         //public ICollection<BancoDados>? BancosDados { get; set;}
 
 
-        public long UserId { get; set; }
-        public User User { get; set; }
 
     }
 }

@@ -819,19 +819,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thiag\\.nuget\\packages\\": {}
+    "C:\\Users\\ttescaro\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\Tescaro.GBT.Domain.csproj",
+      "projectUniqueName": "C:\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\Tescaro.GBT.Domain.csproj",
       "projectName": "Tescaro.GBT.Domain",
-      "projectPath": "D:\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\Tescaro.GBT.Domain.csproj",
-      "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\obj\\",
+      "projectPath": "C:\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\Tescaro.GBT.Domain.csproj",
+      "packagesPath": "C:\\Users\\ttescaro\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\GBT\\Backend\\src\\Tescaro.GBT\\Tescaro.GBT.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ttescaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -878,7 +883,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
