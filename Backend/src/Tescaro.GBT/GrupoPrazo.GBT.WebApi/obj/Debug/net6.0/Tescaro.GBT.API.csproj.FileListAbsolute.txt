@@ -142,7 +142,6 @@ C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\T
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.AssemblyInfoInputs.cache
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.AssemblyInfo.cs
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.csproj.CoreCompileInputs.cache
-C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.Tescaro.GBT.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.Tescaro.GBT.API.props

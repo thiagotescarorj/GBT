@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.Appplication.Interfaces;
@@ -7,7 +8,7 @@ using Tescaro.GBT.Repository;
 namespace Tescaro.GBT.API.Controllers
 {
 
-
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class DNSController : ControllerBase

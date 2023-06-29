@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tescaro.GBT.API.DTOs;
 using Tescaro.GBT.API.Extentions;
@@ -6,7 +7,7 @@ using Tescaro.GBT.Appplication.Interfaces;
 namespace Tescaro.GBT.API.Controllers
 {
 
-
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ChamadoController : ControllerBase
