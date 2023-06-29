@@ -251,3 +251,4 @@ D:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\r
 D:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.pdb
 D:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.genruntimeconfig.cache
 D:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\ref\Tescaro.GBT.API.dll
+C:\Projetos\GBT\Backend\src\Tescaro.GBT\GrupoPrazo.GBT.WebApi\obj\Debug\net6.0\Tescaro.GBT.API.MvcApplicationPartsAssemblyInfo.cs
