@@ -1,2 +1,0 @@
-C:\Projetos\GBT\Frontend\Tescaro.GB7\Tescaro.GB7.WebAPP\obj\Debug\Tescaro.GB7.WebAPP.esproj.SuggestedBindingRedirects.cache
-C:\Projetos\GBT\Frontend\Tescaro.GB7\Tescaro.GB7.WebAPP\obj\Debug\Tescaro.GB7.WebAPP.esproj.CoreCompileInputs.cache
